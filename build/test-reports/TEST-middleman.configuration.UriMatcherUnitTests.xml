@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="DDT7PGJ65J" name="middleman.configuration.UriMatcherUnitTests" tests="6" time="0.0050" timestamp="2012-07-09T17:00:20">
+  <properties>
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="env.VS90COMNTOOLS" value="c:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\Tools\" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Server Compiler" />
+    <property name="env.PROMPT" value="$P$G" />
+    <property name="os.name" value="Windows 7" />
+    <property name="env.FP_NO_HOST_CHECK" value="NO" />
+    <property name="sun.boot.class.path" value="c:\Program Files\Java\jdk1.6.0_24\jre\lib\resources.jar;c:\Program Files\Java\jdk1.6.0_24\jre\lib\rt.jar;c:\Program Files\Java\jdk1.6.0_24\jre\lib\sunrsasign.jar;c:\Program Files\Java\jdk1.6.0_24\jre\lib\jsse.jar;c:\Program Files\Java\jdk1.6.0_24\jre\lib\jce.jar;c:\Program Files\Java\jdk1.6.0_24\jre\lib\charsets.jar;c:\Program Files\Java\jdk1.6.0_24\jre\lib\modules\jdk.boot.jar;c:\Program Files\Java\jdk1.6.0_24\jre\classes" />
+    <property name="env.COMPUTERNAME" value="DDT7PGJ65J" />
+    <property name="test.reports.dir" value="c:\workspace\middleman\build\test-reports" />
+    <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
+    <property name="TODAY" value="July 9 2012" />
+    <property name="findbugs.home" value="c:\workspace\middleman/tools/findbugs-1.3.8" />
+    <property name="env.ALLUSERSPROFILE" value="C:\ProgramData" />
+    <property name="env.SONAR_RUNNER_HOME" value="C:\sonar-runner-1.3" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.home" value="c:\workspace\middleman\tools\apache-ant-1.8.3" />
+    <property name="java.runtime.version" value="1.6.0_24-b07" />
+    <property name="build.timestamp" value="20120709T175958.827" />
+    <property name="env.HOMEPATH" value="\Users\staylor" />
+    <property name="cobertura.dir" value="c:\workspace\middleman/tools/cobertura-1.9.2" />
+    <property name="user.name" value="staylor" />
+    <property name="build.dir" value="c:\workspace\middleman\build" />
+    <property name="isWindows" value="true" />
+    <property name="user.language" value="en" />
+    <property name="env.windows_tracing_flags" value="3" />
+    <property name="sun.boot.library.path" value="c:\Program Files\Java\jdk1.6.0_24\jre\bin" />
+    <property name="reports.dir" value="c:\workspace\middleman\build\reports" />
+    <property name="ant.project.default-target" value="build" />
+    <property name="ant.project.name" value="middleman" />
+    <property name="DSTAMP" value="20120709" />
+    <property name="java.version" value="1.6.0_24" />
+    <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 42 Stepping 7, GenuineIntel" />
+    <property name="user.timezone" value="" />
+    <property name="env.TEMP" value="C:\Windows\TEMP" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="env.SSH_AGENT_PID" value="1812" />
+    <property name="java.endorsed.dirs" value="c:\Program Files\Java\jdk1.6.0_24\jre\lib\endorsed" />
+    <property name="env._JAVACMD" value="c:\Program Files\Java\jdk1.6.0_24\\bin\java.exe" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="env.HOMEDRIVE" value="C:" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="50.0" />
+    <property name="user.country" value="GB" />
+    <property name="java.home" value="c:\Program Files\Java\jdk1.6.0_24\jre" />
+    <property name="dist.dir" value="c:\workspace\middleman\build/dist/middleman" />
+    <property name="env.PSModulePath" value="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\" />
+    <property name="env.APPDATA" value="C:\Users\staylor\AppData\Roaming" />
+    <property name="env.PUBLIC" value="C:\Users\Public" />
+    <property name="env.windows_tracing_logfile" value="C:\BVTBin\Tests\installpackage\csilogfile.log" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="env.ComSpec" value="C:\Windows\system32\cmd.exe" />
+    <property name="manifest.file" value="c:\workspace\middleman\build\jar/MANIFEST.MF" />
+    <property name="env.OS" value="Windows_NT" />
+    <property name="env.CommonProgramFiles" value="C:\Program Files\Common Files" />
+    <property name="ant.file" value="c:\workspace\middleman\build.xml" />
+    <property name="os.version" value="6.1" />
+    <property name="env.ProgramW6432" value="C:\Program Files" />
+    <property name="env._USE_CLASSPATH" value="no" />
+    <property name="env.=::" value="::\" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="19.1-b02" />
+    <property name="antlr.in.classpath" value="jar:file:/c:/workspace/middleman/lib/build/antlr-3.3-complete.jar!/org/antlr/Tool.class" />
+    <property name="env.USERPROFILE" value="C:\Users\staylor" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="C:\workspace\middleman\tools\apache-ant-1.8.3\lib" />
+    <property name="env.JAVA_HOME" value="c:\Program Files\Java\jdk1.6.0_24\" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="env.TMP" value="C:\Users\staylor\AppData\Local\Temp" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="svn.url" value="svn://dev.laterooms.com/internal/middleman" />
+    <property name="user.home" value="C:\Users\staylor" />
+    <property name="env.ProgramData" value="C:\ProgramData" />
+    <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)" />
+    <property name="env.SESSIONNAME" value="Console" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="test.dir" value="c:\workspace\middleman\test" />
+    <property name="java.library.path" value="c:\Program Files\Java\jdk1.6.0_24\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Log Parser 2.2;C:\Program Files (x86)\PC Connectivity Solution\;C:\Program Files\ImageMagick-6.7.6-Q16;C:\Perl64\site\bin;C:\Perl64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\VisualSVN\bin;C:\Program Files\Mercurial;c:\Python27\Scripts;c:\Python27;C:\Windows\Microsoft.NET\Framework\v3.5;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;c:\apache-ant-1.8.3\bin;C:\sonar-runner-1.3\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files (x86)\PICT\;C:\Program Files (x86)\WinSCP\;C:\Program Files (x86)\Log Parser 2.2;C:\Program Files (x86)\PC Connectivity Solution\;C:\Program Files\ImageMagick-6.7.6-Q16;C:\Perl64\site\bin;C:\Perl64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\VisualSVN\bin;C:\Program Files\Mercurial;c:\Python27\Scripts;c:\Python27;C:\Windows\Microsoft.NET\Framework\v3.5;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;c:\apache-ant-1.8.3\bin;C:\sonar-runner-1.3\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files (x86)\PICT\;C:\Ruby193\bin;C:\Program Files\Microsoft SDKs\Windows\v6.0A\Bin\x64;c:\scala-2.9.0.1\bin;c:\apache-maven-3.0.4\bin" />
+    <property name="env.NUMBER_OF_PROCESSORS" value="4" />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="env.USERDNSDOMAIN" value="AD.LATEROOMS.COM" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.file.middleman" value="c:\workspace\middleman\build.xml" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 26 2012" />
+    <property name="java.class.path" value="c:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-launcher.jar;c:\workspace\middleman\lib\build\ant-antlr3.jar;c:\workspace\middleman\lib\build\antlr-3.3-complete.jar;c:\workspace\middleman\lib\build\commons-lang-2.4.jar;c:\workspace\middleman\lib\build\gunit.jar;c:\workspace\middleman\lib\build\http.jar;c:\workspace\middleman\lib\build\mockito-all-1.8.0.jar;c:\workspace\middleman\lib\build\stringtemplate-3.2.jar;c:\workspace\middleman\lib\build\;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-antlr.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-bcel.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-bsf.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-log4j.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-oro.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-regexp.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-resolver.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-xalan2.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-commons-logging.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-commons-net.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-jai.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-javamail.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-jdepend.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-jmf.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-jsch.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-junit.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-junit4.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-launcher.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-netrexx.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-swing.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-testutil.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant.jar;c:\Program Files\Java\jdk1.6.0_24\lib\tools.jar" />
+    <property name="TSTAMP" value="1759" />
+    <property name="env.ANT_OPTS" value="-Xmx1024m" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="env.LOGONSERVER" value="\\PEN-DC02" />
+    <property name="env.windir" value="C:\Windows" />
+    <property name="svn.revision" value="76066" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="Service Pack 1" />
+    <property name="env.ProgramFiles" value="C:\Program Files" />
+    <property name="env.ANT_HOME" value="c:\workspace\middleman\tools\apache-ant-1.8.3" />
+    <property name="java.io.tmpdir" value="C:\Users\staylor\AppData\Local\Temp\" />
+    <property name="env.PROCESSOR_REVISION" value="2a07" />
+    <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files" />
+    <property name="env.VBOX_INSTALL_PATH" value="C:\Program Files\Oracle\VirtualBox\" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="env.SSH_AUTH_SOCK" value="/tmp/ssh-WAMiNg6864/agent.6864" />
+    <property name="env.SystemRoot" value="C:\Windows" />
+    <property name="os.classifier" value="win" />
+    <property name="instrumented.dir" value="c:\workspace\middleman\build/instrumented" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="os.arch" value="amd64" />
+    <property name="env.ANT_CMD_LINE_ARGS" value=" -lib lib\build" />
+    <property name="java.ext.dirs" value="c:\Program Files\Java\jdk1.6.0_24\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="svnant.dir" value="c:\workspace\middleman/tools/svnant" />
+    <property name="env.LOCALAPPDATA" value="C:\Users\staylor\AppData\Local" />
+    <property name="user.dir" value="c:\workspace\middleman" />
+    <property name="ant.file.type.middleman" value="file" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW" />
+    <property name="env.Path" value="C:\Program Files (x86)\Log Parser 2.2;C:\Program Files (x86)\PC Connectivity Solution\;C:\Program Files\ImageMagick-6.7.6-Q16;C:\Perl64\site\bin;C:\Perl64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\VisualSVN\bin;C:\Program Files\Mercurial;c:\Python27\Scripts;c:\Python27;C:\Windows\Microsoft.NET\Framework\v3.5;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;c:\apache-ant-1.8.3\bin;C:\sonar-runner-1.3\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files (x86)\PICT\;C:\Program Files (x86)\WinSCP\;C:\Program Files (x86)\Log Parser 2.2;C:\Program Files (x86)\PC Connectivity Solution\;C:\Program Files\ImageMagick-6.7.6-Q16;C:\Perl64\site\bin;C:\Perl64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\VisualSVN\bin;C:\Program Files\Mercurial;c:\Python27\Scripts;c:\Python27;C:\Windows\Microsoft.NET\Framework\v3.5;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;c:\apache-ant-1.8.3\bin;C:\sonar-runner-1.3\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files (x86)\PICT\;C:\Ruby193\bin;C:\Program Files\Microsoft SDKs\Windows\v6.0A\Bin\x64;c:\scala-2.9.0.1\bin;c:\apache-maven-3.0.4\bin" />
+    <property name="basedir" value="c:\workspace\middleman" />
+    <property name="release.label" value="Dev" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="ant.core.lib" value="C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant.jar" />
+    <property name="compiled.jar.dir" value="c:\workspace\middleman\build\jar" />
+    <property name="env.USERNAME" value="staylor" />
+    <property name="env.SystemDrive" value="C:" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="env.VS100COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\" />
+    <property name="env.USERDOMAIN" value="AD" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="env.=C:" value="c:\workspace\middleman" />
+    <property name="src.dir" value="c:\workspace\middleman\src" />
+    <property name="ant.project.invoked-targets" value="build" />
+    <property name="env.PROCESSOR_LEVEL" value="6" />
+  </properties>
+  <testcase classname="middleman.configuration.UriMatcherUnitTests" name="simpleMatcherMatchesSimpleRoot" time="0.0" />
+  <testcase classname="middleman.configuration.UriMatcherUnitTests" name="simpleMatcherMatchesSimplePaths" time="0.0" />
+  <testcase classname="middleman.configuration.UriMatcherUnitTests" name="patternMatcherMatchesWildcardPaths" time="0.0" />
+  <testcase classname="middleman.configuration.UriMatcherUnitTests" name="doesntMatchMultipleSpecifiedHosts" time="0.0" />
+  <testcase classname="middleman.configuration.UriMatcherUnitTests" name="doesntMatchIpAddress" time="0.0" />
+  <testcase classname="middleman.configuration.UriMatcherUnitTests" name="canExcludeAddressesWithPorts" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

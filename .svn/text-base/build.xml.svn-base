@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<project name="middleman" default="build" basedir=".">
+	
+	<property environment="env"/>
+	<property name="env.COMPUTERNAME" value="${env.HOSTNAME}"/>
+	
+	  <!-- Set the os property -->
+	  <condition property="isLinux">
+	    <os family="unix" />
+	  </condition>
+	  <condition property="isWindows">
+	    <os family="windows" />
+	  </condition>
+	  <condition property="isMac">
+	    <os family="mac" />
+	  </condition>
+
+	  <condition property="os.classifier" value="win">
+	    <os family="windows" />
+	  </condition>
+	  <condition property="os.classifier" value="mac">
+	    <os family="mac" />
+	  </condition>
+	  <condition property="os.classifier" value="linux">
+	    <os family="unix" />
+	  </condition>
+	  <property name="os.classifier" value="unsupported" />
+	
+	
+	  <echo message="This the build file for: ${ant.project.name}"/>
+	  <echo message="Using Ant (version ${ant.version}) found in: ${ant.home}"/>
+	  <echo message="with Java (version ${ant.java.version}) found in ${java.home}"/>
+	
+	<tstamp>
+	        <format property="build.timestamp" pattern="yyyyMMdd'T'HHmmss.SSS"/>
+	    </tstamp>
+
+    <!-- properties overridden by cruisecontrol -->
+    <property name="release.label" value="Dev"/>
+
+    <property name="src.dir" location="src"/>
+    <property name="test.dir" location="test"/>
+
+    <property name="build.dir" location="build"/>
+    <property name="dist.dir" value="${build.dir}/dist/middleman"/>
+
+    <property name="compiled.jar.dir" location="${build.dir}/jar"/>
+    <property name="manifest.file" value="${compiled.jar.dir}/MANIFEST.MF"/>
+
+    <property name="test.reports.dir" location="${build.dir}/test-reports"/>
+    <property name="reports.dir" location="${build.dir}/reports"/>
+    <property name="instrumented.dir" value="${build.dir}/instrumented"/>
+
+    <property name="findbugs.home" value="${basedir}/tools/findbugs-1.3.8"/>
+    <property name="cobertura.dir" value="${basedir}/tools/cobertura-1.9.2"/>
+    <property name="svnant.dir" value="${basedir}/tools/svnant"/>
+
+    <path id="classpath">
+        <fileset dir="lib">
+            <include name="build/*.jar"/>
+            <include name="release/*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="test.classpath">
+        <fileset dir="${compiled.jar.dir}" includes="*.jar"/>
+        <fileset dir="lib">
+            <include name="test/*.jar"/>
+        </fileset>
+        <path refid="classpath"/>
+    </path>
+
+    <path id="antlr.classpath">
+        <fileset dir="${basedir}/lib/build">
+    	<include name="*.jar"/>
+    	 </fileset>
+    </path>
+
+	<path id="svnant.classpath">
+		 <fileset dir="${svnant.dir}/lib">
+		            <include name="**/*.jar"/>
+		        </fileset>
+	  </path>
+
+    <path id="cobertura.class.path">
+        <fileset dir="${cobertura.dir}">
+            <include name="cobertura.jar"/>
+            <include name="lib/**/*.jar"/>
+        </fileset>
+    </path>
+
+    <taskdef classpathref="cobertura.class.path" resource="tasks.properties"/>
+    <typedef classpathref="svnant.classpath" resource="org/tigris/subversion/svnant/svnantlib.xml"/>
+	
+
+    <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask">
+        <classpath>
+            <fileset dir="${findbugs.home}/lib" includes="*.jar"/>
+        </classpath>
+    </taskdef>
+
+    <macrodef name="compile.source">
+        <attribute name="src.dir"/>
+        <attribute name="dest.dir"/>
+        <attribute name="jar.name"/>
+        <attribute name="manifest"/>
+        <attribute name="classes.dir" default="@{dest.dir}/classes"/>
+        <attribute name="classpathref" default="classpath"/>
+        <attribute name="debug" default="yes"/>
+
+        <sequential>
+            <mkdir dir="@{dest.dir}"/>
+            <mkdir dir="@{classes.dir}"/>
+            <javac includeantruntime="false" srcdir="@{src.dir}" destdir="@{classes.dir}" classpathref="@{classpathref}" debug="@{debug}"
+                   target="1.6"/>
+        	
+            <copy todir="@{classes.dir}" includeemptydirs="no">
+                <fileset dir="@{src.dir}" excludes="**/*.java"/>
+            </copy>
+            <jar destfile="@{dest.dir}/@{jar.name}" basedir="@{classes.dir}">
+                <manifest>
+                    <attribute name="Main-Class" value="middleman.Console"/>
+                    <attribute name="SVN-URL" value="${svn.url}"/>
+                    <attribute name="SVN-Revision" value="${svn.revision}"/>
+                </manifest>
+                <fileset dir="view" includes="**/*"/>
+            </jar>
+
+            <delete dir="@{classes.dir}"/>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="unit.test">
+        <attribute name="test.dir"/>
+        <sequential>
+            <mkdir dir="${test.reports.dir}"/>
+            <junit fork="no" forkmode="once" failureproperty="test.failure" logfailedtests="yes">
+                <jvmarg value="-Xmx128M"/>
+                <classpath>
+                    <fileset dir="${instrumented.dir}" includes="*.jar"/>
+                    <path refid="test.classpath"/>
+                    <path refid="cobertura.class.path"/>
+                </classpath>
+                <formatter type="xml"/>
+                <sysproperty key="net.sourceforge.cobertura.datafile" file="${build.dir}/cobertura.ser"/>
+
+                <batchtest todir="${test.reports.dir}" if="testcase">
+                    <fileset dir="@{test.dir}">
+                        <include name="**/${testcase}.java"/>
+                    </fileset>
+                </batchtest>
+                <batchtest todir="${test.reports.dir}" unless="testcase">
+                    <fileset dir="@{test.dir}">
+                        <include name="**/*Tests.java"/>
+                    </fileset>
+                </batchtest>
+            </junit>
+
+            <fail message="Test(s) failed" if="test.failure"/>
+
+            <echo message="Test(s) passed"/>
+
+        </sequential>
+
+    </macrodef>
+    
+	<!-- Targets -->
+	
+	
+	 <!-- Check if Antlr is in classpath -->
+	    <target name="antlr_classpath">
+	        <whichresource property="antlr.in.classpath" class="org.antlr.Tool" />
+	        <fail message="Antlr3 library not found via CLASSPATH ${java.class.path}">
+	            <condition>
+	                <not>
+	                    <isset property="antlr.in.classpath"/>
+	                </not>
+	            </condition>
+	         </fail>
+	        <echo>Antlr3 found via CLASSPATH</echo>
+	    </target>
+	
+	<target name="generate.parser" description="Generates the lexer, parser and tree-walker from the grammar files.">
+	    <echo>Generating the lexer and parser...</echo>
+	    <java classname="org.antlr.Tool" fork="true" failonerror="true">
+	        <arg value="-fo" />
+	        <arg value="${main.src.dir}/${parser.package}" />
+	        <arg value="${parser.grammar.file}" />
+	        <classpath refid="classpath" />
+	    </java>
+
+	</target>
+
+    <target name="compile.grammar" depends="antlr_classpath, clean.grammar">
+        <antlr:ant-antlr3 xmlns:antlr="antlib:org/apache/tools/ant/antlr"
+        report="true"
+		target="src/middleman/configuration/Configuration.g"
+		outputdirectory="src/middleman/configuration">
+            <classpath refid="antlr.classpath"/>
+        </antlr:ant-antlr3>
+    </target>
+
+    <target name="build" depends="clean, compile.grammar, compile, grammar.test, test, dist"
+            description="Runs the full build"/>
+
+    <target name="clean" description="Deletes all the build directories.">
+        <delete>
+    	 <fileset dir="${build.dir}"/>
+    	</delete>
+    </target>
+	
+	 <target name="clean.grammar" description="Deletes the Antlr3 generated configuration lexer and parser.">
+	        <delete file="src/middleman/configuration/ConfigurationLexer.java"/>
+	 	    <delete file="src/middleman/configuration/ConfigurationParser.java"/>
+	  </target>
+
+    <target name="grammar.test" depends="compile.grammar">
+        <java classname="org.antlr.gunit.Interp" failonerror="true">
+            <classpath refid="test.classpath"/>
+            <arg value="${basedir}/test/Configuration.gunit"/>
+        </java>
+    </target>
+
+    <target name="compile" depends="svn.info, compile.grammar" description="Compiles the source">
+        <mkdir dir="${compiled.jar.dir}"/>
+        <manifest file="${manifest.file}" description="The manifest file that will be generated as part of the build" >
+            <attribute name="Built-By" value="${user.name}"/>
+            <section name="middleman">
+                <attribute name="Specification-Title" value="${ant.project.name} web application"/>
+                <attribute name="Specification-Version" value="${release.label}"/>
+                <attribute name="Specification-Vendor" value=""/>
+                <attribute name="Implementation-Title" value="common"/>
+                <attribute name="Implementation-Version" value="${release.label}"/>
+                <attribute name="Implementation-Vendor" value="Copyright © 2009 Graham Brooks"/>
+            </section>
+        </manifest>
+        <compile.source src.dir="${src.dir}" dest.dir="${compiled.jar.dir}"
+                        jar.name="${ant.project.name}.jar" manifest="${manifest.file}"/>
+        <compile.source src.dir="${test.dir}" dest.dir="${compiled.jar.dir}"
+                        jar.name="${ant.project.name}.test.jar" manifest="${manifest.file}"
+                        classpathref="test.classpath"/>
+    </target>
+
+    <target name="test" description="Runs JUnit tests (without building)" unless="notests">
+        <mkdir dir="${instrumented.dir}"/>
+        <unit.test test.dir="${test.dir}"/>
+    </target>
+
+    <target name="dist" description="Create a release distribution (zip)." depends="compile">
+        <mkdir dir="${dist.dir}"/>
+        <copy todir="${dist.dir}/lib">
+            <fileset dir="lib/release" includes="*.jar"/>
+            <fileset file="${compiled.jar.dir}/middleman.jar"/>
+        </copy>
+        <copy todir="${dist.dir}">
+            <fileset dir="docs" includes="*"/>
+        </copy>
+        <zip destfile="${build.dir}/middleman.zip" comment="Middleman distribution">
+            <fileset dir="${build.dir}/dist" includes="**/*"/>
+        </zip>
+    </target>
+
+    <target name="instrument" depends="compile.grammar, compile, grammar.test">
+        <mkdir dir="${instrumented.dir}"/>
+        <cobertura-instrument todir="${instrumented.dir}" datafile="${build.dir}/cobertura.ser">
+            <fileset dir="${compiled.jar.dir}">
+                <include name="middleman.jar"/>
+            </fileset>
+        </cobertura-instrument>
+    </target>
+
+    <target name="coverage" depends="instrument, test">
+        <cobertura-report format="html" destdir="${reports.dir}/html/cobertura"
+                          datafile="${build.dir}/cobertura.ser">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </cobertura-report>
+        <cobertura-report format="xml" destdir="${reports.dir}/xml/cobertura"
+                          datafile="${build.dir}/cobertura.ser">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </cobertura-report>
+    </target>
+
+
+    <target name="findbugs" depends="compile">
+        <mkdir dir="${reports.dir}/xml"/>
+        <findbugs home="${findbugs.home}"
+                  failOnError="true"
+                  output="xml"
+                  outputFile="${reports.dir}/xml/findbugs.xml">
+            <auxClasspath>
+                <path refid="test.classpath"/>
+            </auxClasspath>
+            <sourcePath path="${basedir}/src/"/>
+            <class location="${compiled.jar.dir}/middleman.jar"/>
+        </findbugs>
+    </target>
+
+    <target name="ci" depends="coverage, findbugs, dist">
+    </target>
+
+    <target name="svn.info">
+        <svn>
+            <status path="${basedir}" revisionProperty="svn.revision" urlProperty="svn.url"/>
+        </svn>
+        <!-- If we can't find the revision for some reason, set it to 'unknown revision' -->
+        <property name="svn.revision" value="unknown-revision"/>
+        <property name="svn.url" value="unknown-url"/>
+
+        <echo message="Subversion Revision: ${svn.revision}"/>
+    </target>
+	
+	<target name="diagnostics" description="diagnostics">
+	        <diagnostics/>
+	    </target>
+
+</project>

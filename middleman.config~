@@ -1,0 +1,11 @@
+proxy one {
+    port = 2001
+    debug = 1
+    outgoing-proxy="http://proxy.bigcorp.co.uk:8080"
+
+     stub ^((?!localhost)(?!you\.should\.escape\.dots:8080).)*$ {
+            status-code = 404
+            header = []
+            body = []
+    }
+}

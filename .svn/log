@@ -1,0 +1,3 @@
+<modify-entry
+   name="bin"
+   schedule="delete"/>

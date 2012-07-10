@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.3
+Created-By: 1.6.0_24-b07 (Sun Microsystems Inc.)
+Built-By: staylor
+
+Name: middleman
+Specification-Title: middleman web application
+Specification-Version: Dev
+Specification-Vendor: 
+Implementation-Title: common
+Implementation-Version: Dev
+Implementation-Vendor: Copyright © 2009 Graham Brooks
+

@@ -1,0 +1,77 @@
+gunit Configuration;
+@header{package middleman.configuration;}
+
+STRING:
+"\"This is a string\"" OK
+
+URL:
+"http://google.com" OK
+"http://www.google.com" OK
+"http://www.google.com/" OK
+// must begin http://
+"www.google.com" FAIL
+
+IDENTIFIER:
+"foobar" OK
+"foo_bar" OK
+"foo-bar" OK
+"foobar1" OK
+"foobar12" OK
+"foo-bar2" OK
+"foo_bar2" OK
+"foo-bar-2" OK
+"foo-bar_2" OK
+"5foobar" OK
+"f_2-a" OK
+"aA0_" OK
+// no "funny chars"
+"foo@bar" FAIL
+// not with whitepsace
+"foo bar" FAIL
+"-foobar" OK
+"_foobar" OK
+"3bar" OK
+"3-bar" OK
+
+HOSTNAME:
+"www.google.com" OK
+"host.internal.domain" OK
+"10.0.0.21" OK
+"127.13.213.455" OK
+"127.131.21.455" OK
+"127.13.213.45" OK
+// but not urls
+"http://www.bbc.co.uk" FAIL
+"*.google.com" FAIL
+"foo.bar:8080" FAIL
+"www.go gle.com" FAIL
+
+BLOCK:
+"[]" OK
+"[[]]" OK
+"[foo]" OK
+"[foo[]]" OK
+"[foo[bar]]" OK
+// nested js stings
+"[\nPluckSDK.jsonpcb('request_0')({ \"Envelopes\": [ { \"PayloadType\": \"Responses.Common.CheckFilteredWordsResponse\", \"Payload\": { \"Results\": [ { \"Key\": \"carReviewTitle\", \"Value\": \"\", \"ObjectType\": \"Models.Common.SiteLifeKeyValuePair\" }, { \"Key\": \"carReviewBody\", \"Value\": \"\", \"ObjectType\": \"Models.Common.SiteLifeKeyValuePair\" } ], \"IsCachedResponse\": false, \"ObjectType\": \"Responses.Common.CheckFilteredWordsResponse\", \"ResponseStatus\": { \"StatusCode\": \"OK\", \"Exceptions\": [], \"ObjectType\": \"Models.System.ResponseStatus\" } }, \"ObjectType\": \"Pluck.SiteLife.Daapi.Models.System.ResponseEnvelope\" } ], \"ObjectType\": \"Pluck.SiteLife.Daapi.Models.System.ResponseBatch\" });\n   ]" OK
+// nested cookie header
+"[document.cookie=\"rsi_segs=E05516_11558|E05516_11234|E05516_11504|E05516_11701|E05516_11863|E05516_11977\"]" OK
+// wrong number of []s
+"[foo[bar]]]" FAIL
+"[[foo[bar]]" FAIL
+
+COMMENT:
+"/* This \n is \n a \n multi \n line \n comment. */" OK
+
+LINE_COMMENT:
+"//this is a line comment.\n" OK
+"//this is a line comment without new line." FAIL
+
+NEWLINE:
+// UNIX and Mac OS X use \n.
+"\n" OK
+"\n\n" OK
+// Windows uses \r\n. 
+"\r\n" OK
+"\r\n\r\n" OK
+

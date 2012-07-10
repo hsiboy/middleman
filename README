@@ -1,0 +1,19 @@
+MiddleMan
+A tool to help with the testing web applications by collecting data on the 
+interactions, and providing stubs for those end points between the 
+web client (browser) and the application under test.
+
+At its core middleman is lightweight HTTP proxy that sits between the browser 
+or web client and any web applications that the browser connects to. 
+By intercepting this traffic, middleman is able to collect metrics as well as 
+the exchanged data for analysis or verification. 
+When running as a stub for the end point it can be configured to serve a given 
+HTTP response header, status-code and or body combination. 
+Great for testing the SPOF in your front end.
+
+There is a control panel and API to display the captured interactions. 
+Middleman is useful in manual and exploratory and automated testing.
+
+Building MiddleMan
+MiddleMan requires that the you have a working java development environment 
+set-up, everything else is included in the repository.

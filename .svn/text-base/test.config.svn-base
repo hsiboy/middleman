@@ -1,0 +1,11 @@
+proxy one {
+    port = 2000
+    debug = 1
+    outgoing-proxy="http://proxy.tradermedia.co.uk:8080"
+
+     stub ^((?!localhost)(?!you\.should\.escape\.dots:8080).)*$ {
+            status-code = 404
+            header = []
+            body = []
+    }
+}
