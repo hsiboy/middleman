@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DDT7PGJ65J" name="middleman.HomePageFunctionalTests" tests="1" time="4.435" timestamp="2012-07-09T17:00:05">
+<testsuite errors="0" failures="0" hostname="DDT7PGJ65J" name="middleman.HomePageFunctionalTests" tests="1" time="4.159" timestamp="2012-07-10T12:26:35">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="env.VS90COMNTOOLS" value="c:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\Tools\" />
@@ -12,7 +12,7 @@
     <property name="env.COMPUTERNAME" value="DDT7PGJ65J" />
     <property name="test.reports.dir" value="c:\workspace\middleman\build\test-reports" />
     <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
-    <property name="TODAY" value="July 9 2012" />
+    <property name="TODAY" value="July 10 2012" />
     <property name="findbugs.home" value="c:\workspace\middleman/tools/findbugs-1.3.8" />
     <property name="env.ALLUSERSPROFILE" value="C:\ProgramData" />
     <property name="env.SONAR_RUNNER_HOME" value="C:\sonar-runner-1.3" />
@@ -20,7 +20,7 @@
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
     <property name="ant.home" value="c:\workspace\middleman\tools\apache-ant-1.8.3" />
     <property name="java.runtime.version" value="1.6.0_24-b07" />
-    <property name="build.timestamp" value="20120709T175958.827" />
+    <property name="build.timestamp" value="20120710T132628.676" />
     <property name="env.HOMEPATH" value="\Users\staylor" />
     <property name="cobertura.dir" value="c:\workspace\middleman/tools/cobertura-1.9.2" />
     <property name="user.name" value="staylor" />
@@ -32,7 +32,7 @@
     <property name="reports.dir" value="c:\workspace\middleman\build\reports" />
     <property name="ant.project.default-target" value="build" />
     <property name="ant.project.name" value="middleman" />
-    <property name="DSTAMP" value="20120709" />
+    <property name="DSTAMP" value="20120710" />
     <property name="java.version" value="1.6.0_24" />
     <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 42 Stepping 7, GenuineIntel" />
     <property name="user.timezone" value="" />
@@ -92,13 +92,13 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 26 2012" />
     <property name="java.class.path" value="c:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-launcher.jar;c:\workspace\middleman\lib\build\ant-antlr3.jar;c:\workspace\middleman\lib\build\antlr-3.3-complete.jar;c:\workspace\middleman\lib\build\commons-lang-2.4.jar;c:\workspace\middleman\lib\build\gunit.jar;c:\workspace\middleman\lib\build\http.jar;c:\workspace\middleman\lib\build\mockito-all-1.8.0.jar;c:\workspace\middleman\lib\build\stringtemplate-3.2.jar;c:\workspace\middleman\lib\build\;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-antlr.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-bcel.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-bsf.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-log4j.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-oro.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-regexp.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-resolver.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-apache-xalan2.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-commons-logging.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-commons-net.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-jai.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-javamail.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-jdepend.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-jmf.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-jsch.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-junit.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-junit4.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-launcher.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-netrexx.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-swing.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant-testutil.jar;C:\workspace\middleman\tools\apache-ant-1.8.3\lib\ant.jar;c:\Program Files\Java\jdk1.6.0_24\lib\tools.jar" />
-    <property name="TSTAMP" value="1759" />
+    <property name="TSTAMP" value="1326" />
     <property name="env.ANT_OPTS" value="-Xmx1024m" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="ant.file.type" value="file" />
     <property name="env.LOGONSERVER" value="\\PEN-DC02" />
     <property name="env.windir" value="C:\Windows" />
-    <property name="svn.revision" value="76066" />
+    <property name="svn.revision" value="76167" />
     <property name="java.vm.specification.version" value="1.0" />
     <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64" />
     <property name="sun.cpu.endian" value="little" />
@@ -142,7 +142,7 @@
     <property name="ant.project.invoked-targets" value="build" />
     <property name="env.PROCESSOR_LEVEL" value="6" />
   </properties>
-  <testcase classname="middleman.HomePageFunctionalTests" name="canViewHomepage" time="4.43" />
+  <testcase classname="middleman.HomePageFunctionalTests" name="canViewHomepage" time="4.154" />
   <system-out><![CDATA[Starting configuration server on port 2000
 Starting firefox
 ]]></system-out>

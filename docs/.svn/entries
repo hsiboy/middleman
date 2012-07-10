@@ -1,7 +1,7 @@
 10
 
 dir
-76147
+76167
 svn://dev.laterooms.com/internal/middleman/docs
 svn://dev.laterooms.com
 
@@ -26,16 +26,16 @@ staylor
 
 e43fe038-7802-0410-9cbf-fcd1c6321c28
 
-middleman-as-proxy.bat
+middleman.bat
 file
+76183
 
 
 
-
-2012-05-09T09:55:10.000000Z
-d92a259676fbf9b4522d31218bcb785f
-2012-06-18T13:27:09.321998Z
-75240
+2012-07-10T12:17:12.363591Z
+1ea7487d2a72e1c6d8c639eaa21dec01
+2012-07-10T12:15:40.666873Z
+76183
 staylor
 
 
@@ -58,7 +58,31 @@ staylor
 
 
 
-78
+69
+
+middleman-as-proxy.bat
+file
+76169
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
 
 LICENSE.txt
 file
@@ -94,16 +118,16 @@ staylor
 
 1446
 
-middleman
+middleman.sh
 file
-
+76169
 
 
 
 2012-05-09T09:55:10.000000Z
 2650b2c71982dcb829e10cfd3fbdc56c
-2012-06-18T13:27:09.321998Z
-75240
+2012-07-10T10:35:51.172530Z
+76169
 staylor
 
 
@@ -127,6 +151,30 @@ staylor
 
 
 200
+
+middleman
+file
+76169
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
 
 README
 file
@@ -162,16 +210,16 @@ staylor
 
 103
 
-middleman-as-proxy.config
+middleman.config
 file
+76172
 
 
 
-
-2012-05-09T09:55:10.000000Z
-0d5f1accaeac79d30d1fc97c1659dd03
-2012-06-18T13:27:09.321998Z
-75240
+2012-07-10T10:43:04.675729Z
+df7e541e0e36d7d4ace99c650447c9d6
+2012-07-10T10:41:29.197651Z
+76172
 staylor
 
 
@@ -194,5 +242,29 @@ staylor
 
 
 
-101
+769
+
+middleman-as-proxy.config
+file
+76169
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
 

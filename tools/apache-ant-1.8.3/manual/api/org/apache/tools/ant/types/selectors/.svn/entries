@@ -1,7 +1,7 @@
 10
 
 dir
-76147
+76167
 svn://dev.laterooms.com/internal/middleman/tools/apache-ant-1.8.3/manual/api/org/apache/tools/ant/types/selectors
 svn://dev.laterooms.com
 
@@ -403,74 +403,6 @@ staylor
 
 28491
 
-ReadableSelector.html
-file
-
-
-
-
-2012-02-26T05:29:00.000000Z
-d6934ce269842f854cfb8a247a4b8311
-2012-06-18T13:27:09.321998Z
-75240
-staylor
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-14119
-
-NoneSelector.html
-file
-
-
-
-
-2012-02-26T05:29:00.000000Z
-f123c44f1f8a75558b7bee31d6c1e073
-2012-06-18T13:27:09.321998Z
-75240
-staylor
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-27424
-
 DependSelector.html
 file
 
@@ -538,6 +470,74 @@ staylor
 
 
 14592
+
+ReadableSelector.html
+file
+
+
+
+
+2012-02-26T05:29:00.000000Z
+d6934ce269842f854cfb8a247a4b8311
+2012-06-18T13:27:09.321998Z
+75240
+staylor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14119
+
+NoneSelector.html
+file
+
+
+
+
+2012-02-26T05:29:00.000000Z
+f123c44f1f8a75558b7bee31d6c1e073
+2012-06-18T13:27:09.321998Z
+75240
+staylor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+27424
 
 SelectorUtils.html
 file

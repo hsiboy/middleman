@@ -1,5 +1,0 @@
-proxy one {
-    port = 2001
-    debug = 1
-    outgoing-proxy="http://proxy.tradermedia.co.uk:8080"
-}

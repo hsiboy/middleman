@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g 2012-07-09 18:00:00
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g 2012-07-10 13:26:30
 
 package middleman.configuration;
 
