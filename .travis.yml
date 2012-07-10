@@ -2,3 +2,10 @@ language: java
 jdk:
   - openjdk7
   - openjdk6
+script: "run build"
+ notifications:
+  email:
+    - travis.middleman@stuart-taylor.net
+ on_failure: always
+ on_success: change
+ 
