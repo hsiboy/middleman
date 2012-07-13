@@ -1,8 +1,14 @@
+env:
+  - ANT_HOME=$PWD/tools/apache-ant-1.8.3
+  - ANT_OPTS=-Xmx1024m
 language: java
 jdk:
   - openjdk7
   - openjdk6
-script: "ant build"
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+script: "$ANT_HOME/bin/ant -lib lib\build build"
 notifications:
   email:
     - travis.middleman@stuart-taylor.net
