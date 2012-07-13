@@ -2,7 +2,7 @@ language: java
 jdk:
   - openjdk7
   - openjdk6
-script: "./run build"
+script: "./run.sh build"
 notifications:
   email:
     - travis.middleman@stuart-taylor.net
