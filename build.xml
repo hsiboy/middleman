@@ -55,15 +55,16 @@
     <property name="cobertura.dir" value="${basedir}/tools/cobertura-1.9.2"/>
     <property name="svnant.dir" value="${basedir}/tools/svnant"/>
 
-    <path id="classpath">
+     	<classpath>
+		<!-- the ANTLR jar is not in the lib directory, of course -->
+	      <pathelement location="tools/apache-ant-1.8.3/lib/ant-antlr.jar"/>
+	    </classpath>
+	
+	<path id="classpath">
         <fileset dir="lib">
             <include name="build/*.jar"/>
             <include name="release/*.jar"/>
         </fileset>
-    	<!-- the ANTLR jar is not in the lib directory, of course -->
-    	        <fileset dir="tools/apache-ant-1.8.3/lib">
-    	                <include name="ant-antlr.jar"/>
-    	        </fileset>
     </path>
 
     <path id="test.classpath">
