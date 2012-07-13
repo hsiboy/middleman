@@ -1,6 +1,6 @@
 <a name="Top"></a>
 
-# Middleman
+# Middleman - Great for testing the SPOF in your front end!
 [![Build Status](https://secure.travis-ci.org/hsiboy/middleman.png)](http://secure.travis-ci.org/hsiboy/middleman)
 
 ## MiddleMan
@@ -14,9 +14,9 @@ By intercepting this traffic, middleman is able to collect metrics as well as
 the exchanged data for analysis or verification. 
 When running as a stub for the end point it can be configured to serve a given 
 HTTP response header, status-code and or body combination. 
-Great for testing the SPOF in your front end.
 
-There is a control panel and API to display the captured interactions. 
+There is a control panel and API to configure and display the captured interactions. 
+
 Middleman is useful in manual and exploratory and automated testing.
 
 <a name="MiddleMan Quick Start"></a>
@@ -32,6 +32,7 @@ Middleman is useful in manual and exploratory and automated testing.
 ## Building MiddleMan
 MiddleMan requires that the you have a working java development environment 
 set-up, everything else is included in the repository.
+Middleman has been sucessfully built against OpenJdk6, OpenJdk7 and Oracle JDK (64bit) on windows and Linux.
 
 [Top](#Top)
 
