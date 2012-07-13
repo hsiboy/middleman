@@ -60,6 +60,10 @@
             <include name="build/*.jar"/>
             <include name="release/*.jar"/>
         </fileset>
+    	<!-- the ANTLR jar is not in the lib directory, of course -->
+    	        <fileset dir="tools/apache-ant-1.8.3/lib">
+    	                <include name="ant-antlr.jar"/>
+    	        </fileset>
     </path>
 
     <path id="test.classpath">
@@ -316,5 +320,29 @@
 	<target name="diagnostics" description="diagnostics">
 	        <diagnostics/>
 	    </target>
+	
+	<target name="junit-tests" >
+
+	    <mkdir dir="${reports.tests}"/>
+
+	    <junit printsummary="yes" haltonfailure="yes">
+	      <classpath>
+	        <pathelement location="${project.class.path}"/>
+	        <pathelement location="${build.tests}"/>
+	        <pathelement path="${java.class.path}"/>
+	      </classpath>
+
+	      <formatter type="plain"/>
+	      <formatter type="xml"/>
+
+	      <batchtest fork="yes" todir="${reports.tests}">
+	        <fileset dir="${src.test}">
+	          <include name="**/*Test*.java"/>
+	        </fileset>
+	      </batchtest>
+
+	    </junit>
+
+	</target>
 
 </project>
