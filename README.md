@@ -22,7 +22,7 @@ Middleman is useful in manual and exploratory and automated testing.
 <a name="MiddleMan Quick Start"></a>
 
 ## MiddleMan Quick Start
-1. We recommend you clone the latest master: <a href="https://github.com/hsiboy/middleman/zipball/master">master</a>.
+1. We recommend you clone the latest master.
 2. Read the documentation. We'll be adding more recommended steps here shortly.
 
 [Top](#Top)
