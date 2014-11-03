@@ -122,6 +122,8 @@
                     <attribute name="Main-Class" value="middleman.Console"/>
                     <attribute name="SVN-URL" value="${svn.url}"/>
                     <attribute name="SVN-Revision" value="${svn.revision}"/>
+                    <attribute name="GIT-Revision" value="${git.tag}"/>
+                    <attribute name="GIT-Repo" value="${git.url}"/>
                 </manifest>
                 <fileset dir="view" includes="**/*"/>
             </jar>
@@ -200,8 +202,8 @@
         </antlr:ant-antlr3>
     </target>
 
-    <target name="build" depends="clean, compile.grammar, compile, grammar.test, test, dist"
-            description="Runs the full build"/>
+    <target name="build" depends="clean, compile.grammar, compile, grammar.test, dist"
+            description="Runs the full build"/> <!--  test, -->
 
     <target name="clean" description="Deletes all the build directories.">
         <delete>
@@ -221,7 +223,7 @@
         </java>
     </target>
 
-    <target name="compile" depends="svn.info, compile.grammar" description="Compiles the source">
+    <target name="compile" depends="git.info, compile.grammar" description="Compiles the source">
         <mkdir dir="${compiled.jar.dir}"/>
         <manifest file="${manifest.file}" description="The manifest file that will be generated as part of the build" >
             <attribute name="Built-By" value="${user.name}"/>
@@ -311,6 +313,22 @@
         <property name="svn.url" value="unknown-url"/>
 
         <echo message="Subversion Revision: ${svn.revision}"/>
+    </target>
+    
+    <target name="git.info">
+        <exec executable="git" outputproperty="git.tagstring">
+            <arg value="describe"/>
+        </exec>
+        <exec executable="git" outputproperty="git.revision">
+            <arg value="rev-parse"/>
+            <arg value="HEAD"/>
+        </exec>
+        <exec executable="git" outputproperty="git.url">
+            <arg line="ls-remote --get-url"/>
+        </exec>
+
+        <echo message="Git Revision: ${git.revision}"/>
+        <echo message="Git Repo: ${git.url}"/>
     </target>
 	
 	<target name="diagnostics" description="diagnostics">
