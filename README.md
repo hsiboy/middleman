@@ -19,7 +19,7 @@ There is a control panel and API to configure and display the captured interacti
 
 Middleman is useful in manual and exploratory and automated testing.
 
-[How to Contribute](#ContributingToMiddleMan) | [Known Issues](#KnownIssues)
+[How to Contribute](#ContributingToMiddleMan) | [Known Issues](#KnownIssues) | [Version History](#VersionHistory)
 
 <a name="MiddleManQuickStart"></a>
 
@@ -58,7 +58,8 @@ Middleman has been sucessfully built against OpenJdk6, OpenJdk7 and Oracle JDK (
 MiddleMan is open source, under BSD license, <a href="http://github.com/hsiboy/middleman">hosted on Github here</a>.
 If you have a contribution to make, please fork the repo and submit a pull request.
 
-@hsiboy, @t0mtaylor
+* [hsiboy](https://github.com/hsiboy) ([Twitter](https://twitter.com/hsiboy))
+* [t0mtaylor](https://github.com/t0mtaylor) ([Twitter](https://twitter.com/tom_taylor))
 
 [Top](#Top)
 
@@ -66,10 +67,21 @@ If you have a contribution to make, please fork the repo and submit a pull reque
 
 ## Known Issues
 
+* There is no dist package/release available yet, should do once integration with Travis is working!
 * Mac: .classpath is not used, and so libs for ant will not load and cause an error:
 ```
 Antlr3 library not found via CLASSPATH 
 ```
+
+[Top](#Top)
+
+<a name="VersionHistory"></a>
+
+## Version History
+* 2014-11-03   v0.1.3  Should now look for git instead of svn, readme updates
+* 2014-05-22   v0.1.2  Updated license, been a while!
+* 2012-07-13   v0.1.1   Trying again with Travis, more fun
+* 2012-07-10   v0.1.0   Initial commit into GitHub repo, cleanup and start setup with Travis
 
 
 [Top](#Top)
