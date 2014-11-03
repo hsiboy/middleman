@@ -66,6 +66,10 @@ If you have a contribution to make, please fork the repo and submit a pull reque
 
 ## Known Issues
 
-* Mac: 
+* Mac: .classpath is not used, and so libs for ant will not load and cause an error:
+```
+Antlr3 library not found via CLASSPATH 
+```
+
 
 [Top](#Top)
