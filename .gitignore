@@ -1,0 +1,4 @@
+bin/
+build/jar/
+build/test-reports/
+.DS_Store

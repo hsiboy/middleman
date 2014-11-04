@@ -202,7 +202,7 @@
         </antlr:ant-antlr3>
     </target>
 
-    <target name="build" depends="clean, compile.grammar, compile, grammar.test, dist"
+    <target name="build" depends="clean, compile.grammar, compile, grammar.test, test, dist"
             description="Runs the full build"/> <!--  test, -->
 
     <target name="clean" description="Deletes all the build directories.">

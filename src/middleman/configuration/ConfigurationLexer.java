@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g 2012-07-13 12:18:58
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g 2014-11-04 23:41:06
 
 package middleman.configuration;
 
@@ -51,15 +51,15 @@ public class ConfigurationLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g"; }
+    public String getGrammarFileName() { return "/Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g"; }
 
     // $ANTLR start "PROXY"
     public final void mPROXY() throws RecognitionException {
         try {
             int _type = PROXY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:47:10: ( 'proxy' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:47:12: 'proxy'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:47:10: ( 'proxy' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:47:12: 'proxy'
             {
             match("proxy"); if (state.failed) return ;
 
@@ -79,8 +79,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = BEGIN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:48:10: ( '{' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:48:12: '{'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:48:10: ( '{' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:48:12: '{'
             {
             match('{'); if (state.failed) return ;
 
@@ -99,8 +99,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = END;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:49:12: ( '}' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:49:14: '}'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:49:12: ( '}' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:49:14: '}'
             {
             match('}'); if (state.failed) return ;
 
@@ -119,8 +119,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = STUB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:50:9: ( 'stub' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:50:11: 'stub'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:50:9: ( 'stub' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:50:11: 'stub'
             {
             match("stub"); if (state.failed) return ;
 
@@ -140,8 +140,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = PORT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:51:9: ( 'port' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:51:11: 'port'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:51:9: ( 'port' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:51:11: 'port'
             {
             match("port"); if (state.failed) return ;
 
@@ -161,8 +161,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = STATUSCODE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:52:12: ( 'status-code' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:52:14: 'status-code'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:52:12: ( 'status-code' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:52:14: 'status-code'
             {
             match("status-code"); if (state.failed) return ;
 
@@ -182,8 +182,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = HEADER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:53:11: ( 'header' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:53:13: 'header'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:53:11: ( 'header' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:53:13: 'header'
             {
             match("header"); if (state.failed) return ;
 
@@ -203,8 +203,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = BODY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:54:9: ( 'body' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:54:11: 'body'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:54:9: ( 'body' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:54:11: 'body'
             {
             match("body"); if (state.failed) return ;
 
@@ -224,8 +224,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = OUTPROXY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:55:12: ( 'outgoing-proxy' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:55:14: 'outgoing-proxy'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:55:12: ( 'outgoing-proxy' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:55:14: 'outgoing-proxy'
             {
             match("outgoing-proxy"); if (state.failed) return ;
 
@@ -245,8 +245,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = DEBUG;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:56:10: ( 'debug' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:56:12: 'debug'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:56:10: ( 'debug' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:56:12: 'debug'
             {
             match("debug"); if (state.failed) return ;
 
@@ -266,8 +266,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = OPENBLOCK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:57:11: ( '[' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:57:13: '['
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:57:11: ( '[' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:57:13: '['
             {
             match('['); if (state.failed) return ;
 
@@ -286,8 +286,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = CLOSEBLOCK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:58:12: ( ']' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:58:15: ']'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:58:12: ( ']' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:58:15: ']'
             {
             match(']'); if (state.failed) return ;
 
@@ -306,8 +306,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = EQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:59:4: ( '=' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:59:6: '='
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:59:4: ( '=' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:59:6: '='
             {
             match('='); if (state.failed) return ;
 
@@ -324,8 +324,8 @@ public class ConfigurationLexer extends Lexer {
     // $ANTLR start "DIGIT"
     public final void mDIGIT() throws RecognitionException {
         try {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:61:17: ( '0' .. '9' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:61:19: '0' .. '9'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:61:17: ( '0' .. '9' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:61:19: '0' .. '9'
             {
             matchRange('0','9'); if (state.failed) return ;
 
@@ -340,8 +340,8 @@ public class ConfigurationLexer extends Lexer {
     // $ANTLR start "LETTER"
     public final void mLETTER() throws RecognitionException {
         try {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:63:17: ( 'a' .. 'z' | 'A' .. 'Z' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:63:17: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -367,10 +367,10 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = NUMBER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:65:8: ( ( DIGIT )+ )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:65:10: ( DIGIT )+
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:65:8: ( ( DIGIT )+ )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:65:10: ( DIGIT )+
             {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:65:10: ( DIGIT )+
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:65:10: ( DIGIT )+
             int cnt1=0;
             loop1:
             do {
@@ -384,7 +384,7 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:65:10: DIGIT
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:65:10: DIGIT
             	    {
             	    mDIGIT(); if (state.failed) return ;
 
@@ -415,10 +415,10 @@ public class ConfigurationLexer extends Lexer {
     // $ANTLR start "WORD"
     public final void mWORD() throws RecognitionException {
         try {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:67:15: ( ( LETTER )+ )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:67:17: ( LETTER )+
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:67:15: ( ( LETTER )+ )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:67:17: ( LETTER )+
             {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:67:17: ( LETTER )+
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:67:17: ( LETTER )+
             int cnt2=0;
             loop2:
             do {
@@ -432,7 +432,7 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:67:17: LETTER
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:67:17: LETTER
             	    {
             	    mLETTER(); if (state.failed) return ;
 
@@ -461,8 +461,8 @@ public class ConfigurationLexer extends Lexer {
     // $ANTLR start "SEPERATOR"
     public final void mSEPERATOR() throws RecognitionException {
         try {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:69:20: ( '-' | '_' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:69:20: ( '-' | '_' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:
             {
             if ( input.LA(1)=='-'||input.LA(1)=='_' ) {
                 input.consume();
@@ -486,8 +486,8 @@ public class ConfigurationLexer extends Lexer {
     // $ANTLR start "DNSCHAR"
     public final void mDNSCHAR() throws RecognitionException {
         try {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:72:18: ( LETTER | DIGIT | '-' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:72:18: ( LETTER | DIGIT | '-' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:
             {
             if ( input.LA(1)=='-'||(input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -513,8 +513,8 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = IDENTIFIER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:74:13: ( ( '0' .. '9' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) ( '_' | '-' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:74:15: ( '0' .. '9' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) ( '_' | '-' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:74:13: ( ( '0' .. '9' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) ( '_' | '-' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:74:15: ( '0' .. '9' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' ) ( '_' | '-' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             {
             if ( input.LA(1)=='-'||(input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -526,7 +526,7 @@ public class ConfigurationLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:74:55: ( '_' | '-' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:74:55: ( '_' | '-' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -539,7 +539,7 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:
             	    {
             	    if ( input.LA(1)=='-'||(input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -576,11 +576,11 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:76:8: ( '\"' ( '\\\\' . | ~ ( '\\\\' | '\"' ) )* '\"' )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:76:10: '\"' ( '\\\\' . | ~ ( '\\\\' | '\"' ) )* '\"'
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:76:8: ( '\"' ( '\\\\' . | ~ ( '\\\\' | '\"' ) )* '\"' )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:76:10: '\"' ( '\\\\' . | ~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); if (state.failed) return ;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:76:14: ( '\\\\' . | ~ ( '\\\\' | '\"' ) )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:76:14: ( '\\\\' . | ~ ( '\\\\' | '\"' ) )*
             loop4:
             do {
                 int alt4=3;
@@ -596,7 +596,7 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:76:16: '\\\\' .
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:76:16: '\\\\' .
             	    {
             	    match('\\'); if (state.failed) return ;
             	    matchAny(); if (state.failed) return ;
@@ -604,7 +604,7 @@ public class ConfigurationLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:76:25: ~ ( '\\\\' | '\"' )
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:76:25: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -642,12 +642,12 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = URL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:78:5: ( 'http://' ( DNSCHAR | '\\.' | ':' | '/' )+ )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:78:7: 'http://' ( DNSCHAR | '\\.' | ':' | '/' )+
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:78:5: ( 'http://' ( DNSCHAR | '\\.' | ':' | '/' )+ )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:78:7: 'http://' ( DNSCHAR | '\\.' | ':' | '/' )+
             {
             match("http://"); if (state.failed) return ;
 
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:78:17: ( DNSCHAR | '\\.' | ':' | '/' )+
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:78:17: ( DNSCHAR | '\\.' | ':' | '/' )+
             int cnt5=0;
             loop5:
             do {
@@ -661,7 +661,7 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:
             	    {
             	    if ( (input.LA(1)>='-' && input.LA(1)<=':')||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -703,10 +703,10 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = HOSTNAME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:9: ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* ( '.' ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* ) )* )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:11: ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* ( '.' ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* ) )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:9: ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* ( '.' ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* ) )* )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:11: ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* ( '.' ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* ) )*
             {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:11: ( NUMBER | WORD )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:11: ( NUMBER | WORD )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -725,14 +725,14 @@ public class ConfigurationLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:13: NUMBER
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:13: NUMBER
                     {
                     mNUMBER(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:22: WORD
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:22: WORD
                     {
                     mWORD(); if (state.failed) return ;
 
@@ -741,7 +741,7 @@ public class ConfigurationLexer extends Lexer {
 
             }
 
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:29: ( NUMBER | WORD | '-' | '_' )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:29: ( NUMBER | WORD | '-' | '_' )*
             loop7:
             do {
                 int alt7=5;
@@ -831,28 +831,28 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:31: NUMBER
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:31: NUMBER
             	    {
             	    mNUMBER(); if (state.failed) return ;
 
             	    }
             	    break;
             	case 2 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:40: WORD
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:40: WORD
             	    {
             	    mWORD(); if (state.failed) return ;
 
             	    }
             	    break;
             	case 3 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:47: '-'
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:47: '-'
             	    {
             	    match('-'); if (state.failed) return ;
 
             	    }
             	    break;
             	case 4 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:53: '_'
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:53: '_'
             	    {
             	    match('_'); if (state.failed) return ;
 
@@ -864,7 +864,7 @@ public class ConfigurationLexer extends Lexer {
                 }
             } while (true);
 
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:60: ( '.' ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* ) )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:60: ( '.' ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* ) )*
             loop10:
             do {
                 int alt10=2;
@@ -877,13 +877,13 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:62: '.' ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* )
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:62: '.' ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* )
             	    {
             	    match('.'); if (state.failed) return ;
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:66: ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* )
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:68: ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )*
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:66: ( ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )* )
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:68: ( NUMBER | WORD ) ( NUMBER | WORD | '-' | '_' )*
             	    {
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:68: ( NUMBER | WORD )
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:68: ( NUMBER | WORD )
             	    int alt8=2;
             	    int LA8_0 = input.LA(1);
 
@@ -902,14 +902,14 @@ public class ConfigurationLexer extends Lexer {
             	    }
             	    switch (alt8) {
             	        case 1 :
-            	            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:70: NUMBER
+            	            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:70: NUMBER
             	            {
             	            mNUMBER(); if (state.failed) return ;
 
             	            }
             	            break;
             	        case 2 :
-            	            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:79: WORD
+            	            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:79: WORD
             	            {
             	            mWORD(); if (state.failed) return ;
 
@@ -918,7 +918,7 @@ public class ConfigurationLexer extends Lexer {
 
             	    }
 
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:86: ( NUMBER | WORD | '-' | '_' )*
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:86: ( NUMBER | WORD | '-' | '_' )*
             	    loop9:
             	    do {
             	        int alt9=5;
@@ -1008,28 +1008,28 @@ public class ConfigurationLexer extends Lexer {
 
             	        switch (alt9) {
             	    	case 1 :
-            	    	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:88: NUMBER
+            	    	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:88: NUMBER
             	    	    {
             	    	    mNUMBER(); if (state.failed) return ;
 
             	    	    }
             	    	    break;
             	    	case 2 :
-            	    	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:97: WORD
+            	    	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:97: WORD
             	    	    {
             	    	    mWORD(); if (state.failed) return ;
 
             	    	    }
             	    	    break;
             	    	case 3 :
-            	    	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:104: '-'
+            	    	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:104: '-'
             	    	    {
             	    	    match('-'); if (state.failed) return ;
 
             	    	    }
             	    	    break;
             	    	case 4 :
-            	    	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:80:110: '_'
+            	    	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:80:110: '_'
             	    	    {
             	    	    match('_'); if (state.failed) return ;
 
@@ -1069,11 +1069,11 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = BLOCK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:83:7: ( OPENBLOCK ( options {backtrack=true; } : BLOCK | ~ CLOSEBLOCK )* CLOSEBLOCK )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:83:9: OPENBLOCK ( options {backtrack=true; } : BLOCK | ~ CLOSEBLOCK )* CLOSEBLOCK
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:83:7: ( OPENBLOCK ( options {backtrack=true; } : BLOCK | ~ CLOSEBLOCK )* CLOSEBLOCK )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:83:9: OPENBLOCK ( options {backtrack=true; } : BLOCK | ~ CLOSEBLOCK )* CLOSEBLOCK
             {
             mOPENBLOCK(); if (state.failed) return ;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:83:19: ( options {backtrack=true; } : BLOCK | ~ CLOSEBLOCK )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:83:19: ( options {backtrack=true; } : BLOCK | ~ CLOSEBLOCK )*
             loop11:
             do {
                 int alt11=3;
@@ -1098,14 +1098,14 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:83:48: BLOCK
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:83:48: BLOCK
             	    {
             	    mBLOCK(); if (state.failed) return ;
 
             	    }
             	    break;
             	case 2 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:83:56: ~ CLOSEBLOCK
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:83:56: ~ CLOSEBLOCK
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\u0014')||(input.LA(1)>='\u0016' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1143,10 +1143,10 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = NEWLINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:87:8: ( ( ( '\\r' )? '\\n' )+ )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:87:10: ( ( '\\r' )? '\\n' )+
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:87:8: ( ( ( '\\r' )? '\\n' )+ )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:87:10: ( ( '\\r' )? '\\n' )+
             {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:87:10: ( ( '\\r' )? '\\n' )+
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:87:10: ( ( '\\r' )? '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -1160,9 +1160,9 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:87:11: ( '\\r' )? '\\n'
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:87:11: ( '\\r' )? '\\n'
             	    {
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:87:11: ( '\\r' )?
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:87:11: ( '\\r' )?
             	    int alt12=2;
             	    int LA12_0 = input.LA(1);
 
@@ -1171,7 +1171,7 @@ public class ConfigurationLexer extends Lexer {
             	    }
             	    switch (alt12) {
             	        case 1 :
-            	            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:87:11: '\\r'
+            	            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:87:11: '\\r'
             	            {
             	            match('\r'); if (state.failed) return ;
 
@@ -1214,10 +1214,10 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:89:4: ( ( ' ' | '\\u000C' | '\\t' )+ )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:89:6: ( ' ' | '\\u000C' | '\\t' )+
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:89:4: ( ( ' ' | '\\u000C' | '\\t' )+ )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:89:6: ( ' ' | '\\u000C' | '\\t' )+
             {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:89:6: ( ' ' | '\\u000C' | '\\t' )+
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:89:6: ( ' ' | '\\u000C' | '\\t' )+
             int cnt14=0;
             loop14:
             do {
@@ -1231,7 +1231,7 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:
             	    {
             	    if ( input.LA(1)=='\t'||input.LA(1)=='\f'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -1276,12 +1276,12 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:93:5: ( '/*' ( . )* '*/' ( NEWLINE )? )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:93:7: '/*' ( . )* '*/' ( NEWLINE )?
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:93:5: ( '/*' ( . )* '*/' ( NEWLINE )? )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:93:7: '/*' ( . )* '*/' ( NEWLINE )?
             {
             match("/*"); if (state.failed) return ;
 
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:93:12: ( . )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:93:12: ( . )*
             loop15:
             do {
                 int alt15=2;
@@ -1306,7 +1306,7 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt15) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:93:12: .
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:93:12: .
             	    {
             	    matchAny(); if (state.failed) return ;
 
@@ -1320,7 +1320,7 @@ public class ConfigurationLexer extends Lexer {
 
             match("*/"); if (state.failed) return ;
 
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:93:20: ( NEWLINE )?
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:93:20: ( NEWLINE )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1329,7 +1329,7 @@ public class ConfigurationLexer extends Lexer {
             }
             switch (alt16) {
                 case 1 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:93:20: NEWLINE
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:93:20: NEWLINE
                     {
                     mNEWLINE(); if (state.failed) return ;
 
@@ -1357,12 +1357,12 @@ public class ConfigurationLexer extends Lexer {
         try {
             int _type = LINE_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:96:13: ( '//' (~ ( '\\r' | '\\n' ) )* NEWLINE )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:96:15: '//' (~ ( '\\r' | '\\n' ) )* NEWLINE
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:96:13: ( '//' (~ ( '\\r' | '\\n' ) )* NEWLINE )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:96:15: '//' (~ ( '\\r' | '\\n' ) )* NEWLINE
             {
             match("//"); if (state.failed) return ;
 
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:96:20: (~ ( '\\r' | '\\n' ) )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:96:20: (~ ( '\\r' | '\\n' ) )*
             loop17:
             do {
                 int alt17=2;
@@ -1375,7 +1375,7 @@ public class ConfigurationLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:96:20: ~ ( '\\r' | '\\n' )
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:96:20: ~ ( '\\r' | '\\n' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1412,166 +1412,166 @@ public class ConfigurationLexer extends Lexer {
     // $ANTLR end "LINE_COMMENT"
 
     public void mTokens() throws RecognitionException {
-        // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:8: ( PROXY | BEGIN | END | STUB | PORT | STATUSCODE | HEADER | BODY | OUTPROXY | DEBUG | OPENBLOCK | CLOSEBLOCK | EQ | NUMBER | IDENTIFIER | STRING | URL | HOSTNAME | BLOCK | NEWLINE | WS | COMMENT | LINE_COMMENT )
+        // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:8: ( PROXY | BEGIN | END | STUB | PORT | STATUSCODE | HEADER | BODY | OUTPROXY | DEBUG | OPENBLOCK | CLOSEBLOCK | EQ | NUMBER | IDENTIFIER | STRING | URL | HOSTNAME | BLOCK | NEWLINE | WS | COMMENT | LINE_COMMENT )
         int alt18=23;
         alt18 = dfa18.predict(input);
         switch (alt18) {
             case 1 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:10: PROXY
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:10: PROXY
                 {
                 mPROXY(); if (state.failed) return ;
 
                 }
                 break;
             case 2 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:16: BEGIN
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:16: BEGIN
                 {
                 mBEGIN(); if (state.failed) return ;
 
                 }
                 break;
             case 3 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:22: END
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:22: END
                 {
                 mEND(); if (state.failed) return ;
 
                 }
                 break;
             case 4 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:26: STUB
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:26: STUB
                 {
                 mSTUB(); if (state.failed) return ;
 
                 }
                 break;
             case 5 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:31: PORT
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:31: PORT
                 {
                 mPORT(); if (state.failed) return ;
 
                 }
                 break;
             case 6 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:36: STATUSCODE
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:36: STATUSCODE
                 {
                 mSTATUSCODE(); if (state.failed) return ;
 
                 }
                 break;
             case 7 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:47: HEADER
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:47: HEADER
                 {
                 mHEADER(); if (state.failed) return ;
 
                 }
                 break;
             case 8 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:54: BODY
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:54: BODY
                 {
                 mBODY(); if (state.failed) return ;
 
                 }
                 break;
             case 9 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:59: OUTPROXY
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:59: OUTPROXY
                 {
                 mOUTPROXY(); if (state.failed) return ;
 
                 }
                 break;
             case 10 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:68: DEBUG
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:68: DEBUG
                 {
                 mDEBUG(); if (state.failed) return ;
 
                 }
                 break;
             case 11 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:74: OPENBLOCK
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:74: OPENBLOCK
                 {
                 mOPENBLOCK(); if (state.failed) return ;
 
                 }
                 break;
             case 12 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:84: CLOSEBLOCK
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:84: CLOSEBLOCK
                 {
                 mCLOSEBLOCK(); if (state.failed) return ;
 
                 }
                 break;
             case 13 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:95: EQ
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:95: EQ
                 {
                 mEQ(); if (state.failed) return ;
 
                 }
                 break;
             case 14 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:98: NUMBER
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:98: NUMBER
                 {
                 mNUMBER(); if (state.failed) return ;
 
                 }
                 break;
             case 15 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:105: IDENTIFIER
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:105: IDENTIFIER
                 {
                 mIDENTIFIER(); if (state.failed) return ;
 
                 }
                 break;
             case 16 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:116: STRING
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:116: STRING
                 {
                 mSTRING(); if (state.failed) return ;
 
                 }
                 break;
             case 17 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:123: URL
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:123: URL
                 {
                 mURL(); if (state.failed) return ;
 
                 }
                 break;
             case 18 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:127: HOSTNAME
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:127: HOSTNAME
                 {
                 mHOSTNAME(); if (state.failed) return ;
 
                 }
                 break;
             case 19 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:136: BLOCK
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:136: BLOCK
                 {
                 mBLOCK(); if (state.failed) return ;
 
                 }
                 break;
             case 20 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:142: NEWLINE
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:142: NEWLINE
                 {
                 mNEWLINE(); if (state.failed) return ;
 
                 }
                 break;
             case 21 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:150: WS
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:150: WS
                 {
                 mWS(); if (state.failed) return ;
 
                 }
                 break;
             case 22 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:153: COMMENT
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:153: COMMENT
                 {
                 mCOMMENT(); if (state.failed) return ;
 
                 }
                 break;
             case 23 :
-                // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:1:161: LINE_COMMENT
+                // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:1:161: LINE_COMMENT
                 {
                 mLINE_COMMENT(); if (state.failed) return ;
 
@@ -1584,8 +1584,8 @@ public class ConfigurationLexer extends Lexer {
 
     // $ANTLR start synpred1_Configuration
     public final void synpred1_Configuration_fragment() throws RecognitionException {   
-        // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:83:48: ( BLOCK )
-        // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:83:48: BLOCK
+        // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:83:48: ( BLOCK )
+        // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:83:48: BLOCK
         {
         mBLOCK(); if (state.failed) return ;
 
@@ -1595,8 +1595,8 @@ public class ConfigurationLexer extends Lexer {
 
     // $ANTLR start synpred2_Configuration
     public final void synpred2_Configuration_fragment() throws RecognitionException {   
-        // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:83:56: (~ CLOSEBLOCK )
-        // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:83:56: ~ CLOSEBLOCK
+        // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:83:56: (~ CLOSEBLOCK )
+        // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:83:56: ~ CLOSEBLOCK
         {
         if ( (input.LA(1)>='\u0000' && input.LA(1)<='\u0014')||(input.LA(1)>='\u0016' && input.LA(1)<='\uFFFF') ) {
             input.consume();
@@ -1645,8 +1645,8 @@ public class ConfigurationLexer extends Lexer {
 
     protected DFA18 dfa18 = new DFA18(this);
     static final String DFA18_eotS =
-        "\1\uffff\1\17\2\uffff\5\17\1\40\2\uffff\1\42\1\17\5\uffff\6\17"+
-        "\1\uffff\6\17\3\uffff\1\42\1\17\2\uffff\12\17\1\72\1\73\3\17\1\77"+
+        "\1\uffff\1\17\2\uffff\5\17\1\40\2\uffff\1\42\1\17\5\uffff\6\17\1"+
+        "\uffff\6\17\3\uffff\1\42\1\17\2\uffff\12\17\1\72\1\73\3\17\1\77"+
         "\2\17\1\102\2\uffff\2\17\2\uffff\1\17\1\106\1\uffff\1\17\1\110\1"+
         "\17\1\uffff\1\17\1\uffff\7\17\1\122\1\17\1\uffff\2\17\1\126\1\uffff";
     static final String DFA18_eofS =
@@ -1661,17 +1661,17 @@ public class ConfigurationLexer extends Lexer {
         "\uffff\2\172\1\uffff\3\172\1\uffff\1\172\1\uffff\11\172\1\uffff"+
         "\3\172\1\uffff";
     static final String DFA18_acceptS =
-        "\2\uffff\1\2\1\3\6\uffff\1\14\1\15\2\uffff\1\20\1\17\1\24\1\25"+
-        "\7\uffff\1\22\6\uffff\1\13\1\23\1\16\2\uffff\1\26\1\27\23\uffff"+
-        "\1\5\1\4\2\uffff\1\21\1\10\2\uffff\1\1\3\uffff\1\12\1\uffff\1\7"+
-        "\11\uffff\1\6\3\uffff\1\11";
+        "\2\uffff\1\2\1\3\6\uffff\1\14\1\15\2\uffff\1\20\1\17\1\24\1\25\7"+
+        "\uffff\1\22\6\uffff\1\13\1\23\1\16\2\uffff\1\26\1\27\23\uffff\1"+
+        "\5\1\4\2\uffff\1\21\1\10\2\uffff\1\1\3\uffff\1\12\1\uffff\1\7\11"+
+        "\uffff\1\6\3\uffff\1\11";
     static final String DFA18_specialS =
         "\11\uffff\1\0\115\uffff}>";
     static final String[] DFA18_transitionS = {
-            "\1\21\1\20\1\uffff\1\21\1\20\22\uffff\1\21\1\uffff\1\16\12"+
-            "\uffff\1\17\1\uffff\1\22\12\14\3\uffff\1\13\3\uffff\32\15\1"+
-            "\11\1\uffff\1\12\1\uffff\1\17\1\uffff\1\15\1\6\1\15\1\10\3\15"+
-            "\1\5\6\15\1\7\1\1\2\15\1\4\7\15\1\2\1\uffff\1\3",
+            "\1\21\1\20\1\uffff\1\21\1\20\22\uffff\1\21\1\uffff\1\16\12\uffff"+
+            "\1\17\1\uffff\1\22\12\14\3\uffff\1\13\3\uffff\32\15\1\11\1\uffff"+
+            "\1\12\1\uffff\1\17\1\uffff\1\15\1\6\1\15\1\10\3\15\1\5\6\15"+
+            "\1\7\1\1\2\15\1\4\7\15\1\2\1\uffff\1\3",
             "\1\27\1\31\1\uffff\12\25\7\uffff\32\26\4\uffff\1\30\1\uffff"+
             "\16\26\1\24\2\26\1\23\10\26",
             "",
