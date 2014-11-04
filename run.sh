@@ -3,7 +3,7 @@
 ANT_HOME=$PWD/tools/apache-ant-1.8.3
 export ANT_OPTS=-Xmx1024m
 
-$ANT_HOME/bin/ant -lib lib\build $@
+$ANT_HOME/bin/ant -lib lib/build $@
 
 ANT_STATUS=$?
 
