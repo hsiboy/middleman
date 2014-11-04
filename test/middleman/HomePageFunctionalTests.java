@@ -14,7 +14,7 @@ public class HomePageFunctionalTests {
         TestContext.using(TestAsset.middleman().with(TestAsset.firefox())).verify(new Block<TestContext>() {
             public void yield(TestContext ctx) {
                 ctx.driver().get(TestAsset.middlemanInstance().uri("/"));
-                assertThat(ctx.driver().getTitle(), is("Middleman - Server"));
+                assertThat(ctx.driver().getTitle(), is("Home | Middleman - Dynamic Proxy Server"));
             }
         });
     }

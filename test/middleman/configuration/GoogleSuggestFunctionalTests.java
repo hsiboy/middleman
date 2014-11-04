@@ -1,14 +1,15 @@
 package middleman.configuration;
 
+import java.io.File;
 import java.util.List;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+
 
 public class GoogleSuggestFunctionalTests {
 
@@ -18,38 +19,29 @@ public class GoogleSuggestFunctionalTests {
 
     @Test
     public void spinGoogle() {
-        WebDriver driver = null;// = new FirefoxDriver();
+        WebDriver driver = new FirefoxDriver();
+                
         try {
             // The Firefox driver supports javascript
             driver = getFirefoxDriver();
 
             // Go to the Google Suggest home page
-            driver.get("http://www.google.com/webhp?complete=1&hl=en");
+            driver.get("http://www.google.co.uk/");
+            
+            WebElement element = driver.findElement(By.name("q"));
+            element.sendKeys("Cheese!\n"); // send also a "\n"
+            element.submit();
 
-            // Enter the query string "Cheese"
-            WebElement query = driver.findElement(By.name("q"));
-            query.sendKeys("Cheese");
+            // wait until the google page shows the result
+            List<WebElement> findElements = driver.findElements(By.xpath("//*[@id='rso']//h3/a"));
 
-            // Sleep until the div we want is visible or 5 seconds is over
-            long end = System.currentTimeMillis() + 5000;
-            while (System.currentTimeMillis() < end) {
-
-                WebElement resultsDiv = (WebElement) driver.findElement(By.className("gsib_a"));
-                try {
-                // If results have been returned, the results are displayed in a drop down.
-                if (resultsDiv.isDisplayed()) {
-                    break;
-                }
-                } catch (NoSuchElementException e) {}
-                
+            
+         // this are all the links you like to visit
+            for (WebElement webElement : findElements)
+            {
+                System.out.println(webElement.getAttribute("href"));
             }
-
-            // And now list the suggestions
-            List<WebElement> allSuggestions = driver.findElements(By.xpath("//td[@class='gssb_e']"));
-
-            for (WebElement suggestion : allSuggestions) {
-                System.out.println(suggestion.getText());
-            }
+            
         } finally {
             if (driver != null) {
                 driver.quit();
@@ -58,9 +50,11 @@ public class GoogleSuggestFunctionalTests {
     }
 
     private FirefoxDriver getFirefoxDriver() {
-        System.out.println("getFirefoxDriver()");
         
-    	FirefoxProfile profile = new FirefoxProfile();
+        String basedir = System.getProperty("user.dir");
+    	File firefoxProfileFolder = new File(basedir + "/test/middleman/firefoxprofile");
+    	FirefoxProfile profile = new FirefoxProfile(firefoxProfileFolder);
+        profile.setPreference("extensions.checkCompatibility", false);
         // profile.setPreference("network.proxy.http", "proxy");
         // profile.setPreference("network.proxy.http_port", 8080);
         // profile.setPreference("network.proxy.type", 1);

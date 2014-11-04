@@ -28,7 +28,7 @@ public class ProxyLogAcceptanceTests {
 
                 ctx.driver().get(TestAsset.middlemanInstance().uri("/TestAsset.middlemanPassingThrough/log"));
                 String title = ctx.driver().getTitle();
-                assertThat(title, is("Proxy Configuration - TestAsset.middlemanPassingThrough"));
+                assertThat(title, is("Requests Log - TestAsset.middlemanPassingThrough | Middleman"));
                 assertThat(ctx.driver().getPageSource(), containsString("google"));
             }
         });

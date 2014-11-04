@@ -22,7 +22,7 @@ public class HomePageAcceptanceTests {
             public void yield(TestContext ctx) {
                 ctx.driver().get(TestAsset.middlemanInstance().uri("/"));
                 String title = ctx.driver().getTitle();
-                assertThat(title, is("Middleman - Server"));
+                assertThat(title, is("Home | Middleman - Dynamic Proxy Server"));
             }
         });
     }
@@ -44,8 +44,7 @@ public class HomePageAcceptanceTests {
         testContext.verify(new Block<TestContext>() {
             public void yield(TestContext ctx) {
                 ctx.driver().get(TestAsset.middlemanInstance().uri("/"));
-                WebElement element = ctx.driver().findElement(By.linkText("New Proxy"));
-
+                WebElement element = ctx.driver().findElement(By.linkText("Create New Proxy"));
                 assertThat(element.getAttribute("href"), is("http://localhost:2000/proxy/new"));
             }
         });
