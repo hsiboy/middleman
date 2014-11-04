@@ -2,6 +2,7 @@
 
 # Middleman - Great for testing the SPOF in your front end!
 [![Build Status](https://secure.travis-ci.org/hsiboy/middleman.png)](http://secure.travis-ci.org/hsiboy/middleman)
+[![Build Status](https://travis-ci.org/hsiboy/middleman.svg?branch=master)](https://travis-ci.org/hsiboy/middleman)
 
 ## MiddleMan
 A tool to help with the testing web applications by collecting data on the 
