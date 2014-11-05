@@ -205,7 +205,11 @@
     <target name="build" depends="clean, compile.grammar, compile, grammar.test, test, dist"
             description="Runs the full build"/> <!--  test, -->
 
-    <target name="clean" description="Deletes all the build directories.">
+    <condition property="build.dir.exists" else="false">
+        <available file="${build.dir}" type="dir" />
+    </condition>
+        
+    <target name="clean" description="Deletes all the build directories." if="build.dir.exists">
         <delete dir="${build.dir}" failonerror="false"/>
     </target>
 	
