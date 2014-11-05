@@ -72,7 +72,7 @@ public class ProxyLogAcceptanceTests {
                 TestAsset.requestFromProxy("http://www.google.com/?param1=abc&param2=xyz123");
                 
                 HttpResponse response = TestAsset.requestFromMiddleman("/TestAsset.middlemanPassingThrough/log/json");
-                assertThat(response.containsHeader("Content-type", "text/javascript"), is(true));
+                assertThat(response.containsHeader("Content-type", "application/json"), is(true));
                 
                 ctx.driver().get(TestAsset.middlemanInstance().uri("/TestAsset.middlemanPassingThrough/log/json"));
 

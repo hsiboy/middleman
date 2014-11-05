@@ -75,7 +75,7 @@ public class WebContext {
     
     public void renderTemplateJSONResponse(String templateName, TemplateAttributes templateAttributes) {
         Hashtable<String, String> jsonHeaders = new Hashtable<String, String>();
-        jsonHeaders.put("Content-type", "text/javascript");
+        jsonHeaders.put("Content-type", "application/json");
 
         renderTemplateResponse(templateName, templateAttributes, jsonHeaders, new HashMap<Class, AttributeRenderer>());
     }
