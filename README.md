@@ -102,6 +102,8 @@ Antlr3 library not found via CLASSPATH
 <a name="VersionHistory"></a>
 
 ## Version History
+* 2014-11-05   v0.1.5  Updated docs and templates, added JSON output of request log :)
+* 2014-11-04   v0.1.4 Tests running via Eclipse and fixed
 * 2014-11-03   v0.1.3  Should now look for git instead of svn, readme updates
 * 2014-05-22   v0.1.2  Updated license, been a while!
 * 2012-07-13   v0.1.1   Trying again with Travis, more fun
