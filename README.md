@@ -40,14 +40,36 @@ chmod +x tools/apache-ant-1.8.3/bin/ant
 ./run.sh
 ```
 
+3. Use compiled version in build/dist/middleman directory
+4. Run 'middleman' batch/bash script (depending on OS) with options in middleman.config, default port 2000
+5. Check out the console and the web interface [http://localhost:2000/](http://localhost:2000/)
+6. Documentation: [http://localhost:2000/doc/index.html](http://localhost:2000/doc/index.html)
+
 [Top](#Top)
 
 <a name="BuildingMiddleMan"></a>
 
 ## Building MiddleMan
-MiddleMan requires that the you have a working java development environment 
-set-up, everything else is included in the repository.
-Middleman has been sucessfully built against OpenJdk6, OpenJdk7 and Oracle JDK (64bit) on windows and Linux.
+MiddleMan requires that the you have a working java development environment set-up, everything else is included in the repository.
+Middleman has been sucessfully built against OpenJdk6, OpenJdk7 and Oracle JDK (64bit) on Windows, Linux and Mac OS X.
+
+Dist available soon for those who dont do builds!
+
+
+## Using MiddleMan
+Example proxy setup: third-party - [http://localhost:2000/third-party](http://localhost:2000/third-party)
+
+Page will show what responses will be stubbed out, along with http status code, you can also add more while the proxy server is running
+
+View log of requests via:
+
+* HTML - [http://localhost:2000/third-party/log](http://localhost:2000/third-party/log)
+* XML - [http://localhost:2000/third-party/log/xml](http://localhost:2000/third-party/log/xml)
+* CSV - [http://localhost:2000/third-party/log/csv](http://localhost:2000/third-party/log/csv)
+* JSON - [http://localhost:2000/third-party/log/json](http://localhost:2000/third-party/log/json)
+
+TODO: ~~JSON Object!~~ :)
+
 
 [Top](#Top)
 
@@ -61,13 +83,15 @@ If you have a contribution to make, please fork the repo and submit a pull reque
 * [hsiboy](https://github.com/hsiboy) ([Twitter](https://twitter.com/hsiboy))
 * [t0mtaylor](https://github.com/t0mtaylor) ([Twitter](https://twitter.com/tom_taylor))
 
+Thanks to Graham Brooks for the intial groundwork back in 2009!
+
 [Top](#Top)
 
 <a name="KnownIssues"></a>
 
 ## Known Issues
 
-* There is no dist package/release available yet, should do once integration with Travis is working!
+* There is no dist package/release available yet, should do once integration with Travis is working (almost)!
 * Mac: .classpath is not used, and so libs for ant will not load and cause an error:
 ```
 Antlr3 library not found via CLASSPATH 
@@ -78,6 +102,8 @@ Antlr3 library not found via CLASSPATH
 <a name="VersionHistory"></a>
 
 ## Version History
+* 2014-11-05   v0.1.5  Updated docs and templates, added JSON output of request log :)
+* 2014-11-04   v0.1.4 Tests running via Eclipse and fixed
 * 2014-11-03   v0.1.3  Should now look for git instead of svn, readme updates
 * 2014-05-22   v0.1.2  Updated license, been a while!
 * 2012-07-13   v0.1.1   Trying again with Travis, more fun

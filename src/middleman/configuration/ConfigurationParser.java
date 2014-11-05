@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g 2012-07-13 12:18:58
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g 2014-11-05 09:26:30
 
 package middleman.configuration;
 
@@ -57,18 +57,18 @@ public class ConfigurationParser extends Parser {
         
 
     public String[] getTokenNames() { return ConfigurationParser.tokenNames; }
-    public String getGrammarFileName() { return "c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g"; }
+    public String getGrammarFileName() { return "/Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g"; }
 
 
 
     // $ANTLR start "configuration"
-    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:11:1: configuration[MiddlemanConfiguration config] : ( configurationStatement[config] )* EOF ;
+    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:11:1: configuration[MiddlemanConfiguration config] : ( configurationStatement[config] )* EOF ;
     public final void configuration(MiddlemanConfiguration config) throws RecognitionException {
         try {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:12:2: ( ( configurationStatement[config] )* EOF )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:12:4: ( configurationStatement[config] )* EOF
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:12:2: ( ( configurationStatement[config] )* EOF )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:12:4: ( configurationStatement[config] )* EOF
             {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:12:4: ( configurationStatement[config] )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:12:4: ( configurationStatement[config] )*
             loop1:
             do {
                 int alt1=2;
@@ -81,7 +81,7 @@ public class ConfigurationParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:12:5: configurationStatement[config]
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:12:5: configurationStatement[config]
             	    {
             	    pushFollow(FOLLOW_configurationStatement_in_configuration28);
             	    configurationStatement(config);
@@ -114,14 +114,14 @@ public class ConfigurationParser extends Parser {
 
 
     // $ANTLR start "configurationStatement"
-    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:15:1: configurationStatement[MiddlemanConfiguration config] : ( PORT EQ port= NUMBER | def= proxyDefinition );
+    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:15:1: configurationStatement[MiddlemanConfiguration config] : ( PORT EQ port= NUMBER | def= proxyDefinition );
     public final void configurationStatement(MiddlemanConfiguration config) throws RecognitionException {
         Token port=null;
         ProxyConfig def = null;
 
 
         try {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:16:2: ( PORT EQ port= NUMBER | def= proxyDefinition )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:16:2: ( PORT EQ port= NUMBER | def= proxyDefinition )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -140,7 +140,7 @@ public class ConfigurationParser extends Parser {
             }
             switch (alt2) {
                 case 1 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:16:4: PORT EQ port= NUMBER
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:16:4: PORT EQ port= NUMBER
                     {
                     match(input,PORT,FOLLOW_PORT_in_configurationStatement45); if (state.failed) return ;
                     match(input,EQ,FOLLOW_EQ_in_configurationStatement47); if (state.failed) return ;
@@ -152,7 +152,7 @@ public class ConfigurationParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:17:4: def= proxyDefinition
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:17:4: def= proxyDefinition
                     {
                     pushFollow(FOLLOW_proxyDefinition_in_configurationStatement60);
                     def=proxyDefinition();
@@ -180,7 +180,7 @@ public class ConfigurationParser extends Parser {
 
 
     // $ANTLR start "proxyDefinition"
-    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:20:1: proxyDefinition returns [ProxyConfig proxy] : PROXY name= IDENTIFIER BEGIN ( proxyStatement[proxy] )* END ;
+    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:20:1: proxyDefinition returns [ProxyConfig proxy] : PROXY name= IDENTIFIER BEGIN ( proxyStatement[proxy] )* END ;
     public final ProxyConfig proxyDefinition() throws RecognitionException {
         ProxyConfig proxy = null;
 
@@ -188,8 +188,8 @@ public class ConfigurationParser extends Parser {
 
          proxy = new ProxyConfig(); 
         try {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:22:2: ( PROXY name= IDENTIFIER BEGIN ( proxyStatement[proxy] )* END )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:22:4: PROXY name= IDENTIFIER BEGIN ( proxyStatement[proxy] )* END
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:22:2: ( PROXY name= IDENTIFIER BEGIN ( proxyStatement[proxy] )* END )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:22:4: PROXY name= IDENTIFIER BEGIN ( proxyStatement[proxy] )* END
             {
             match(input,PROXY,FOLLOW_PROXY_in_proxyDefinition81); if (state.failed) return proxy;
             name=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_proxyDefinition85); if (state.failed) return proxy;
@@ -197,7 +197,7 @@ public class ConfigurationParser extends Parser {
               proxy.setName(name.getText());
             }
             match(input,BEGIN,FOLLOW_BEGIN_in_proxyDefinition88); if (state.failed) return proxy;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:22:65: ( proxyStatement[proxy] )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:22:65: ( proxyStatement[proxy] )*
             loop3:
             do {
                 int alt3=2;
@@ -210,7 +210,7 @@ public class ConfigurationParser extends Parser {
 
                 switch (alt3) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:22:66: proxyStatement[proxy]
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:22:66: proxyStatement[proxy]
             	    {
             	    pushFollow(FOLLOW_proxyStatement_in_proxyDefinition91);
             	    proxyStatement(proxy);
@@ -243,7 +243,7 @@ public class ConfigurationParser extends Parser {
 
 
     // $ANTLR start "proxyStatement"
-    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:25:1: proxyStatement[ProxyConfig proxy] : ( PORT EQ port= NUMBER | OUTPROXY EQ outproxy= STRING | statement= stubStatement | DEBUG EQ debugLevel= NUMBER );
+    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:25:1: proxyStatement[ProxyConfig proxy] : ( PORT EQ port= NUMBER | OUTPROXY EQ outproxy= STRING | statement= stubStatement | DEBUG EQ debugLevel= NUMBER );
     public final void proxyStatement(ProxyConfig proxy) throws RecognitionException {
         Token port=null;
         Token outproxy=null;
@@ -252,7 +252,7 @@ public class ConfigurationParser extends Parser {
 
 
         try {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:26:2: ( PORT EQ port= NUMBER | OUTPROXY EQ outproxy= STRING | statement= stubStatement | DEBUG EQ debugLevel= NUMBER )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:26:2: ( PORT EQ port= NUMBER | OUTPROXY EQ outproxy= STRING | statement= stubStatement | DEBUG EQ debugLevel= NUMBER )
             int alt4=4;
             switch ( input.LA(1) ) {
             case PORT:
@@ -285,7 +285,7 @@ public class ConfigurationParser extends Parser {
 
             switch (alt4) {
                 case 1 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:26:4: PORT EQ port= NUMBER
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:26:4: PORT EQ port= NUMBER
                     {
                     match(input,PORT,FOLLOW_PORT_in_proxyStatement109); if (state.failed) return ;
                     match(input,EQ,FOLLOW_EQ_in_proxyStatement111); if (state.failed) return ;
@@ -297,7 +297,7 @@ public class ConfigurationParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:27:4: OUTPROXY EQ outproxy= STRING
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:27:4: OUTPROXY EQ outproxy= STRING
                     {
                     match(input,OUTPROXY,FOLLOW_OUTPROXY_in_proxyStatement122); if (state.failed) return ;
                     match(input,EQ,FOLLOW_EQ_in_proxyStatement124); if (state.failed) return ;
@@ -309,7 +309,7 @@ public class ConfigurationParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:28:4: statement= stubStatement
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:28:4: statement= stubStatement
                     {
                     pushFollow(FOLLOW_stubStatement_in_proxyStatement137);
                     statement=stubStatement();
@@ -323,7 +323,7 @@ public class ConfigurationParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:29:4: DEBUG EQ debugLevel= NUMBER
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:29:4: DEBUG EQ debugLevel= NUMBER
                     {
                     match(input,DEBUG,FOLLOW_DEBUG_in_proxyStatement144); if (state.failed) return ;
                     match(input,EQ,FOLLOW_EQ_in_proxyStatement146); if (state.failed) return ;
@@ -349,7 +349,7 @@ public class ConfigurationParser extends Parser {
 
 
     // $ANTLR start "stubStatement"
-    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:34:1: stubStatement returns [StubResponse stub] : STUB url= HOSTNAME BEGIN ( stubSetting[stub] )* END ;
+    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:34:1: stubStatement returns [StubResponse stub] : STUB url= HOSTNAME BEGIN ( stubSetting[stub] )* END ;
     public final StubResponse stubStatement() throws RecognitionException {
         StubResponse stub = null;
 
@@ -359,8 +359,8 @@ public class ConfigurationParser extends Parser {
         stub = new StubResponse();
 
         try {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:38:3: ( STUB url= HOSTNAME BEGIN ( stubSetting[stub] )* END )
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:38:5: STUB url= HOSTNAME BEGIN ( stubSetting[stub] )* END
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:38:3: ( STUB url= HOSTNAME BEGIN ( stubSetting[stub] )* END )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:38:5: STUB url= HOSTNAME BEGIN ( stubSetting[stub] )* END
             {
             match(input,STUB,FOLLOW_STUB_in_stubStatement174); if (state.failed) return stub;
             url=(Token)match(input,HOSTNAME,FOLLOW_HOSTNAME_in_stubStatement178); if (state.failed) return stub;
@@ -368,7 +368,7 @@ public class ConfigurationParser extends Parser {
               stub.setUrl(url.getText()); 
             }
             match(input,BEGIN,FOLLOW_BEGIN_in_stubStatement181); if (state.failed) return stub;
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:38:60: ( stubSetting[stub] )*
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:38:60: ( stubSetting[stub] )*
             loop5:
             do {
                 int alt5=2;
@@ -381,7 +381,7 @@ public class ConfigurationParser extends Parser {
 
                 switch (alt5) {
             	case 1 :
-            	    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:38:61: stubSetting[stub]
+            	    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:38:61: stubSetting[stub]
             	    {
             	    pushFollow(FOLLOW_stubSetting_in_stubStatement184);
             	    stubSetting(stub);
@@ -414,14 +414,14 @@ public class ConfigurationParser extends Parser {
 
 
     // $ANTLR start "stubSetting"
-    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:41:1: stubSetting[StubResponse stub] : ( STATUSCODE EQ statusCode= NUMBER | HEADER EQ header= BLOCK | BODY EQ body= BLOCK );
+    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:41:1: stubSetting[StubResponse stub] : ( STATUSCODE EQ statusCode= NUMBER | HEADER EQ header= BLOCK | BODY EQ body= BLOCK );
     public final void stubSetting(StubResponse stub) throws RecognitionException {
         Token statusCode=null;
         Token header=null;
         Token body=null;
 
         try {
-            // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:42:2: ( STATUSCODE EQ statusCode= NUMBER | HEADER EQ header= BLOCK | BODY EQ body= BLOCK )
+            // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:42:2: ( STATUSCODE EQ statusCode= NUMBER | HEADER EQ header= BLOCK | BODY EQ body= BLOCK )
             int alt6=3;
             switch ( input.LA(1) ) {
             case STATUSCODE:
@@ -449,7 +449,7 @@ public class ConfigurationParser extends Parser {
 
             switch (alt6) {
                 case 1 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:42:4: STATUSCODE EQ statusCode= NUMBER
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:42:4: STATUSCODE EQ statusCode= NUMBER
                     {
                     match(input,STATUSCODE,FOLLOW_STATUSCODE_in_stubSetting201); if (state.failed) return ;
                     match(input,EQ,FOLLOW_EQ_in_stubSetting203); if (state.failed) return ;
@@ -461,7 +461,7 @@ public class ConfigurationParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:43:4: HEADER EQ header= BLOCK
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:43:4: HEADER EQ header= BLOCK
                     {
                     match(input,HEADER,FOLLOW_HEADER_in_stubSetting214); if (state.failed) return ;
                     match(input,EQ,FOLLOW_EQ_in_stubSetting216); if (state.failed) return ;
@@ -473,7 +473,7 @@ public class ConfigurationParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // c:\\workspace\\middleman\\src\\middleman\\configuration\\Configuration.g:44:4: BODY EQ body= BLOCK
+                    // /Users/tomtaylor/Documents/workspace/middleman/src/middleman/configuration/Configuration.g:44:4: BODY EQ body= BLOCK
                     {
                     match(input,BODY,FOLLOW_BODY_in_stubSetting227); if (state.failed) return ;
                     match(input,EQ,FOLLOW_EQ_in_stubSetting229); if (state.failed) return ;
