@@ -202,14 +202,11 @@
         </antlr:ant-antlr3>
     </target>
 
-    <target name="build" depends="clean, compile.grammar, compile, grammar.test, dist"
+    <target name="build" depends="clean, compile.grammar, compile, grammar.test, test, dist"
             description="Runs the full build"/> <!--  test, -->
 
     <target name="clean" description="Deletes all the build directories.">
-        <mkdir dir="${build.dir}"/>
-        <delete>
-            <fileset dir="${build.dir}"/>
-        </delete>
+        <delete dir="${build.dir}" failonerror="false"/>
     </target>
 	
 	 <target name="clean.grammar" description="Deletes the Antlr3 generated configuration lexer and parser.">
