@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_71.jdk"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="tools/cobertura-1.9.2/examples/basic/src"/>
 	<classpathentry kind="src" path="view"/>
-	<classpathentry kind="lib" path="lib/build/ant-antlr3.jar"/>
-	<classpathentry kind="lib" path="lib/build/antlr-3.3-complete.jar"/>
 	<classpathentry kind="lib" path="lib/build/gunit.jar"/>
-	<classpathentry kind="lib" path="lib/build/http.jar"/>
-	<classpathentry kind="lib" path="lib/build/mockito-all-1.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/release/gunit.jar"/>
+	<classpathentry kind="lib" path="lib/release/http.jar"/>
+	<classpathentry kind="lib" path="lib/release/stringtemplate-3.2.jar"/>
+	<classpathentry kind="lib" path="tools/cobertura-1.9.2/cobertura.jar"/>
+	<classpathentry kind="lib" path="tools/cobertura-1.9.2/lib/asm-3.0.jar"/>
+	<classpathentry kind="lib" path="tools/cobertura-1.9.2/lib/asm-tree-3.0.jar"/>
+	<classpathentry kind="lib" path="tools/cobertura-1.9.2/lib/jakarta-oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="tools/cobertura-1.9.2/lib/log4j-1.2.9.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/annotations.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/ant.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/asm-analysis-3.1.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/asm-commons-3.1.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/asm-tree-3.1.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/asm-util-3.1.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/asm-xml-3.1.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/bcel.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/findbugs-ant.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/findbugs.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/jaxen-1.1.1.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/jFormatString.jar"/>
+	<classpathentry kind="lib" path="tools/findbugs-1.3.8/lib/jsr305.jar"/>
+	<classpathentry kind="lib" path="tools/svnant/lib/ganymed.jar"/>
+	<classpathentry kind="lib" path="tools/svnant/lib/svnant.jar"/>
+	<classpathentry kind="lib" path="tools/svnant/lib/svnClientAdapter.jar"/>
+	<classpathentry kind="lib" path="tools/svnant/lib/svnjavahl.jar"/>
+	<classpathentry kind="lib" path="tools/svnant/lib/svnkit.jar"/>
+	<classpathentry kind="lib" path="lib/test/hamcrest-all-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/test/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/test/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/build/antlr-3.3-complete.jar"/>
 	<classpathentry kind="lib" path="lib/build/stringtemplate-3.2.jar"/>
 	<classpathentry kind="lib" path="lib/test/apache-mime4j-0.6.jar"/>
 	<classpathentry kind="lib" path="lib/test/bcpkix-jdk15on-1.48.jar"/>
@@ -29,11 +60,7 @@
 	<classpathentry kind="lib" path="lib/test/cssparser-0.9.14.jar"/>
 	<classpathentry kind="lib" path="lib/test/gson-2.3.jar"/>
 	<classpathentry kind="lib" path="lib/test/guava-18.0.jar"/>
-	<classpathentry kind="lib" path="lib/test/hamcrest-all-1.2.jar"/>
-	<classpathentry kind="lib" path="lib/test/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="lib/test/hamcrest-library-1.3.jar"/>
 	<classpathentry kind="lib" path="lib/test/htmlunit-2.15.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="lib/test/htmlunit-core-js-2.15.jar"/>
 	<classpathentry kind="lib" path="lib/test/httpclient-4.3.4.jar"/>
 	<classpathentry kind="lib" path="lib/test/httpcore-4.3.2.jar"/>
@@ -50,7 +77,6 @@
 	<classpathentry kind="lib" path="lib/test/jna-platform-3.4.0.jar"/>
 	<classpathentry kind="lib" path="lib/test/json-20080701.jar"/>
 	<classpathentry kind="lib" path="lib/test/jsp-api-2.0.jar"/>
-	<classpathentry kind="lib" path="lib/test/junit-dep-4.11.jar"/>
 	<classpathentry kind="lib" path="lib/test/mx4j-tools-3.0.1.jar"/>
 	<classpathentry kind="lib" path="lib/test/nekohtml-1.9.21.jar"/>
 	<classpathentry kind="lib" path="lib/test/netty-3.5.7.Final.jar"/>
@@ -68,5 +94,7 @@
 	<classpathentry kind="lib" path="lib/test/xalan-2.7.1.jar"/>
 	<classpathentry kind="lib" path="lib/test/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="lib/test/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="lib/build/mockito-all-1.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/test/junit-dep-4.11.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
