@@ -136,8 +136,8 @@
         <attribute name="test.dir"/>
         <sequential>
             <mkdir dir="${test.reports.dir}"/>
-            <junit fork="no" forkmode="once" failureproperty="test.failure" logfailedtests="yes">
-                <jvmarg value="-Xmx128M"/>
+            <junit fork="yes" forkmode="once" failureproperty="test.failure" logfailedtests="yes">
+                <jvmarg value="-Xmx512M"/>
                 <classpath>
                     <fileset dir="${instrumented.dir}" includes="*.jar"/>
                     <path refid="test.classpath"/>
@@ -202,7 +202,7 @@
         </antlr:ant-antlr3>
     </target>
 
-    <target name="build" depends="clean, compile.grammar, compile, grammar.test, dist"
+    <target name="build" depends="clean, compile.grammar, compile, grammar.test, test, dist"
             description="Runs the full build"/> <!--  test, -->
 
     <condition property="build.dir.exists" else="false">
