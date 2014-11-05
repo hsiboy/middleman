@@ -57,16 +57,16 @@ Dist available soon for those who dont do builds!
 
 
 ## Using MiddleMan
-Example proxy setup: third-party - [http://localhost:2000/third-party/log/xml](http://localhost:2000/third-party/log/xml)
+Example proxy setup: third-party - [http://localhost:2000/third-party](http://localhost:2000/third-party)
 
 Page will show what responses will be stubbed out, along with http status code, you can also add more while the proxy server is running
 
 View log of requests via:
 
-* HTML - http://localhost:2000/third-party/log](http://localhost:2000/third-party/log)
-* XML - http://localhost:2000/third-party/log/xml](http://localhost:2000/third-party/log/xml)
-* CSV - http://localhost:2000/third-party/log/csv](http://localhost:2000/third-party/log/csv)
-* JSON - http://localhost:2000/third-party/log/json](http://localhost:2000/third-party/log/json)
+* HTML - [http://localhost:2000/third-party/log](http://localhost:2000/third-party/log)
+* XML - [http://localhost:2000/third-party/log/xml](http://localhost:2000/third-party/log/xml)
+* CSV - [http://localhost:2000/third-party/log/csv](http://localhost:2000/third-party/log/csv)
+* JSON - [http://localhost:2000/third-party/log/json](http://localhost:2000/third-party/log/json)
 
 TODO: ~~JSON Object!~~ :)
 
@@ -92,10 +92,10 @@ Thanks to Graham Brooks for the intial groundwork back in 2009!
 ## Known Issues
 
 * There is no dist package/release available yet, should do once integration with Travis is working (almost)!
-~~* Mac: .classpath is not used, and so libs for ant will not load and cause an error:
+* Mac: .classpath is not used, and so libs for ant will not load and cause an error:
 ```
 Antlr3 library not found via CLASSPATH 
-```~~
+```
 
 [Top](#Top)
 
