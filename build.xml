@@ -202,7 +202,7 @@
         </antlr:ant-antlr3>
     </target>
 
-    <target name="build" depends="clean, compile.grammar, compile, grammar.test, test, dist"
+    <target name="build" depends="clean, compile.grammar, compile, grammar.test, dist"
             description="Runs the full build"/> <!--  test, -->
 
     <condition property="build.dir.exists" else="false">
