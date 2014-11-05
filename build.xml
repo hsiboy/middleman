@@ -120,8 +120,8 @@
             <jar destfile="@{dest.dir}/@{jar.name}" basedir="@{classes.dir}">
                 <manifest>
                     <attribute name="Main-Class" value="middleman.Console"/>
-                    <attribute name="SVN-URL" value="${svn.url}"/>
-                    <attribute name="SVN-Revision" value="${svn.revision}"/>
+                    <!--<attribute name="SVN-URL" value="${svn.url}"/>
+                    <attribute name="SVN-Revision" value="${svn.revision}"/>-->
                     <attribute name="GIT-Revision" value="${git.tag}"/>
                     <attribute name="GIT-Repo" value="${git.url}"/>
                 </manifest>
@@ -202,7 +202,7 @@
         </antlr:ant-antlr3>
     </target>
 
-    <target name="build" depends="clean, compile.grammar, compile, grammar.test, test, dist"
+    <target name="build" depends="clean, compile.grammar, compile, grammar.test, dist"
             description="Runs the full build"/> <!--  test, -->
 
     <target name="clean" description="Deletes all the build directories.">
@@ -234,6 +234,8 @@
                 <attribute name="Implementation-Title" value="common"/>
                 <attribute name="Implementation-Version" value="${release.label}"/>
                 <attribute name="Implementation-Vendor" value="Copyright © 2009 Graham Brooks"/>
+                <attribute name="GIT-Revision" value="${git.tag}"/>
+                <attribute name="GIT-Repo" value="${git.url}"/>
             </section>
         </manifest>
         <compile.source src.dir="${src.dir}" dest.dir="${compiled.jar.dir}"
