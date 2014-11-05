@@ -63,5 +63,23 @@ public class ProxyLogAcceptanceTests {
             }
         });
     }
+    
+    @Test
+    public void returnsLogsInJson() {
+        testContext.verify(new Block<TestContext>() {
+            public void yield(TestContext ctx) {
+
+                TestAsset.requestFromProxy("http://www.google.com/?param1=abc&param2=xyz123");
+                
+                HttpResponse response = TestAsset.requestFromMiddleman("/TestAsset.middlemanPassingThrough/log/json");
+                assertThat(response.containsHeader("Content-type", "application/json"), is(true));
+                
+                ctx.driver().get(TestAsset.middlemanInstance().uri("/TestAsset.middlemanPassingThrough/log/json"));
+
+                assertThat("Should have got host in this json " + ctx.driver().getPageSource(),
+                		ctx.driver().getPageSource(), containsString("google"));
+            }
+        });
+    }
 
 }

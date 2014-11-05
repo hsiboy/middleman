@@ -1,4 +1,11 @@
 Middleman
 
+Github Repo: https://github.com/hsiboy/middleman
+
 Middleman is a runtime configurable proxy designed to help functionally test web projects.
+
+
+Check out the console and the web interface: http://localhost:2000/
+
+Documentation: http://localhost:2000/doc/index.html
 

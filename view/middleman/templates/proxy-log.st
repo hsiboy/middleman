@@ -14,7 +14,9 @@
 		    <form action="/$proxy.name$/log/reset" method="POST" name="resetlogs">
 		        <button type="submit">Clear Log</button>
 		        <a class="button" href="/$proxy.name$/log">Refresh Log</a>
-		        <a class="download" href="/$proxy.name$/log/csv">Download this log as CSV</a>
+		        <a class="download" href="/$proxy.name$/log/csv">Download this log as CSV</a> | 
+		        <a class="download" href="/$proxy.name$/log/xml">View XML</a> | 
+		        <a class="download" href="/$proxy.name$/log/json">View JSON</a>
 		    </form>
 		    <div><span class="requestsRunning">$requestCounter.numberOfRunningRequests$</span> requests are still in process, no requests have been processed in the last <span id="millisecondsWithoutRunningRequest">$requestCounter.millisecondsWithoutRunningRequest$</span> milliseconds.</div>
 		    <table>
@@ -50,7 +52,7 @@
 		        }$
 		    </table>
 		    <div class="footer">
-		    	&copy; Middleman 2010 - 2012 - <a href="/doc/index.html">Middleman documentation</a>
+		    	&copy; Middleman 2010 - 2014 - <a href="/doc/index.html">Documentation</a> | <a href="http://github.com/hsiboy/middleman">hosted on Github</a>
 		    </div>
 		</div>
 	</body>
