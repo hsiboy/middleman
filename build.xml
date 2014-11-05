@@ -206,9 +206,19 @@
             description="Runs the full build"/> <!--  test, -->
 
     <target name="clean" description="Deletes all the build directories.">
-        <delete>
-    	 <fileset dir="${build.dir}"/>
-    	</delete>
+        <if>
+          <available file="${build.dir}" type="dir" />
+          <then>
+            <echo message="${build.dir} Directory exists" />
+            <delete>
+                <fileset dir="${build.dir}"/>
+            </delete>
+          </then>
+          <else>
+            <echo message="${build.dir} Directory does not exist, lets make it" />
+            <mkdir dir="${build.dir}"/>
+          </else>
+        </if>
     </target>
 	
 	 <target name="clean.grammar" description="Deletes the Antlr3 generated configuration lexer and parser.">
