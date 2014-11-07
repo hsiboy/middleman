@@ -1,6 +1,5 @@
 env:
   - ANT_OPTS=-Xmx1024m
-  - DISPLAY=':99.0'
 language: java
 jdk:
   - openjdk7

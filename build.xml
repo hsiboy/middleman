@@ -40,6 +40,7 @@
 
     <property name="src.dir" location="src"/>
     <property name="test.dir" location="test"/>
+    <property name="firefoxProfile.dir" location="${test.dir}/middleman/firefoxprofile"/>
 
     <property name="build.dir" location="build"/>
     <property name="dist.dir" value="${build.dir}/dist/middleman"/>
@@ -204,7 +205,7 @@
     </target>
 
     <target name="build" depends="clean, compile.grammar, compile, grammar.test, test, dist"
-            description="Runs the full build"/> <!--  test, -->
+            description="Runs the full build"/>
 
     <condition property="build.dir.exists" else="false">
         <available file="${build.dir}" type="dir" />
@@ -247,8 +248,16 @@
                         jar.name="${ant.project.name}.test.jar" manifest="${manifest.file}"
                         classpathref="test.classpath"/>
     </target>
+    
+    <condition property="firefoxProfile.dir.exists" else="false">
+        <available file="${firefoxProfile.dir}" type="dir" />
+    </condition>
 
-    <target name="test" description="Runs JUnit tests (without building)" unless="notests">
+    <target name="test.firefoxProfile.dir" description="Create Firefix profile directories if doesnt exist (Travis)" unless="firefoxProfile.dir.exists">
+        <mkdir dir="${firefoxProfile.dir}" failonerror="false"/>
+    </target>
+
+    <target name="test" description="Runs JUnit tests (without building)" unless="notests" depends="test.firefoxProfile.dir">
         <mkdir dir="${instrumented.dir}"/>
         <unit.test test.dir="${test.dir}"/>
     </target>
