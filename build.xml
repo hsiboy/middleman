@@ -259,6 +259,7 @@
 
     <target name="test" description="Runs JUnit tests (without building)" unless="notests" depends="test.firefoxProfile.dir">
         <mkdir dir="${instrumented.dir}"/>
+        <mkdir dir="${firefoxProfile.dir}"/>
         <unit.test test.dir="${test.dir}"/>
     </target>
 
