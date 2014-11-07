@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	    <meta charset="utf-8">
-  		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  		<title dir="ltr">Proxy Configuration - $proxy.name$ | Middleman</title>
-  		<meta name="viewport" content="width=device-width">
-	    <link rel="stylesheet" type="text/css" href="/middleman.css">
-	</head>
-	<body>
-		<div class="content">
+		$middleman/templates/header(title={Proxy Configuration - $proxy.name$ | Middleman})$
 			<div class="box">
 		    	<div class="title">Proxy server "$proxy.name$"</div>
 		    	<div class="back">Your are here: <a href="/">Home</a> &gt; Proxy server "$proxy.name$"</div>
@@ -61,9 +51,4 @@
 		            }$
 		        </table>
 		    </div>
-			<div class="footer">
-		    	&copy; Middleman 2010 - 2014 - <a href="/doc/index.html">Documentation</a> | <a href="http://github.com/hsiboy/middleman">hosted on Github</a>
-		    </div>
-		</div>
-	</body>
-</html>
+		$middleman/templates/footer()$

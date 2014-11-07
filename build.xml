@@ -117,6 +117,7 @@
             <copy todir="@{classes.dir}" includeemptydirs="no">
                 <fileset dir="@{src.dir}" excludes="**/*.java"/>
             </copy>
+
             <jar destfile="@{dest.dir}/@{jar.name}" basedir="@{classes.dir}">
                 <manifest>
                     <attribute name="Main-Class" value="middleman.Console"/>
@@ -125,7 +126,7 @@
                     <attribute name="GIT-Revision" value="${git.tag}"/>
                     <attribute name="GIT-Repo" value="${git.url}"/>
                 </manifest>
-                <fileset dir="view" includes="**/*"/>
+                <fileset dir="view" includes="**/**/*"/>
             </jar>
 
             <delete dir="@{classes.dir}"/>
@@ -261,6 +262,7 @@
         <copy todir="${dist.dir}">
             <fileset dir="docs" includes="*"/>
         </copy>
+        <chmod file="${dist.dir}/middleman.sh" perm="ugo+rx"/>
         <zip destfile="${build.dir}/middleman.zip" comment="Middleman distribution">
             <fileset dir="${build.dir}/dist" includes="**/*"/>
         </zip>

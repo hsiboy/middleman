@@ -1,4 +1,4 @@
-{
+$if(jsonp)$mm_jsonp_callback($endif${
 	"logs" : {
 		"server" : "$proxy.name$",
 		"requestsRunning" : "$requestCounter.numberOfRunningRequests$",
@@ -9,7 +9,7 @@
 	            "bytesSent" : "$it.bytesSent$",
 	            "bytesReceived" : "$it.bytesReceived$",
 	            "elapsedTime" : "$it.elapsedTime$",
-	            "successfull" : "$it.requestSuccesfullCode$",
+	            "successful" : "$it.requestSuccesfullCode$",
 	            "contentType" : "$it.responseContentType$",
 	            "host" : "$it.host$",
 	            "path" : "$it.path$",
@@ -18,4 +18,4 @@
 	        }
 	    }$]
 	}
-}
+}$if(jsonp)$);$endif$

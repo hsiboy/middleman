@@ -24,7 +24,8 @@ public class ProxyConfigurationHttpHandler implements HttpHandler {
             dispatcher.register(pathMatcher(proxyServer.getConfig().getName(), "log"), new ProxyLogPresenter(proxyServer.getLogs()));
             dispatcher.register(pathMatcher(proxyServer.getConfig().getName(), "log", "csv"), new ProxyLogCSVPresenter(proxyServer.getLogs()));
             dispatcher.register(pathMatcher(proxyServer.getConfig().getName(), "log", "xml"), new ProxyLogXMLPresenter(proxyServer.getLogs()));
-            dispatcher.register(pathMatcher(proxyServer.getConfig().getName(), "log", "json"), new ProxyLogJSONPresenter(proxyServer.getLogs()));
+            dispatcher.register(pathMatcher(proxyServer.getConfig().getName(), "log", "json"), new ProxyLogJSONPresenter(proxyServer.getLogs(), false));
+            dispatcher.register(pathMatcher(proxyServer.getConfig().getName(), "log", "jsonp"), new ProxyLogJSONPresenter(proxyServer.getLogs(), true));
             dispatcher.register(pathMatcher(proxyServer.getConfig().getName(), "log", "reset"), new ResetProxyLogCommand(proxyServer.getLogs()));
 
             if (method.equalsIgnoreCase("GET")) {

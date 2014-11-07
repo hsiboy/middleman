@@ -9,7 +9,7 @@
             <bytesSent>$it.bytesSent$</bytesSent>
             <bytesReceived>$it.bytesReceived$</bytesReceived>
             <elapsedTime>$it.elapsedTime$</elapsedTime>
-            <successfull>$it.requestSuccesfullCode$</successfull>
+            <successful>$it.requestSuccesfullCode$</successful>
             <contentType>$it.responseContentType$</contentType>
             <host>$it.host$</host>
             <path>$it.path$</path>

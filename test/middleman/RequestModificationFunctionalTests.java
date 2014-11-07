@@ -27,9 +27,9 @@ public class RequestModificationFunctionalTests {
 			public void yield(TestContext ctx)  {
 				TestAsset.middlemanInstance().api().addRequestModifier().addingHeader("HeaderAbc", "xyz");
 
-				DummyHttpServer proxiedServer = new DummyHttpServer(8081).start();
+				DummyHttpServer proxiedServer = new DummyHttpServer(8082).start();
 
-				String proxiedServerUrl = "http://localhost:8081/";
+				String proxiedServerUrl = "http://localhost:8082/";
 				TestAsset.requestFromProxy(proxiedServerUrl);
 
 				ReceivedRequest firstReceivedRequest = proxiedServer.receivedRequests().get(0);

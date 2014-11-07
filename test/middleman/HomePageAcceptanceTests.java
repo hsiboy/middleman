@@ -38,6 +38,18 @@ public class HomePageAcceptanceTests {
             }
         });
     }
+    
+    @Test
+    public void homepageContainsGithubRepoLink() {
+        testContext.verify(new Block<TestContext>() {
+            public void yield(TestContext ctx) {
+                ctx.driver().get(TestAsset.middlemanInstance().uri("/"));
+                WebElement element = ctx.driver().findElement(By.linkText("hosted on Github"));
+
+                assertThat(element.getAttribute("href"), is("http://github.com/hsiboy/middleman"));
+            }
+        });
+    }
 
     @Test
     public void homepageContainsLinkToCreateNewProxy() {
