@@ -1,6 +1,6 @@
 package middleman;
 
-import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
 
@@ -29,13 +29,13 @@ public class RequestModificationFunctionalTests {
 
 				DummyHttpServer proxiedServer = new DummyHttpServer(8082).start();
 
-				String proxiedServerUrl = "http://localhost:8082/";
-				TestAsset.requestFromProxy(proxiedServerUrl);
+				String proxiedPort = "8082";
+				TestAsset.requestFromProxy("http://localhost:" + proxiedPort + "/");
 
 				ReceivedRequest firstReceivedRequest = proxiedServer.receivedRequests().get(0);
 
 				assertThat(firstReceivedRequest, is(notNullValue()));
-				assertThat(firstReceivedRequest.getUrl(), is(proxiedServerUrl));
+				assertThat(firstReceivedRequest.getUrl(), containsString(proxiedPort));
 				assertThat(firstReceivedRequest.getHeaders().getFirst("HeaderAbc"), is("xyz"));
 			}
 		});
