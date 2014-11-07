@@ -33,6 +33,10 @@ public class RequestModificationFunctionalTests {
 				TestAsset.requestFromProxy("http://localhost:" + proxiedPort + "/");
 
 				ReceivedRequest firstReceivedRequest = proxiedServer.receivedRequests().get(0);
+				
+				System.out.print(firstReceivedRequest);
+				System.out.print(firstReceivedRequest.getUrl());
+				System.out.print(firstReceivedRequest.getHeaders().getFirst("HeaderAbc"));
 
 				assertThat(firstReceivedRequest, is(notNullValue()));
 				assertThat(firstReceivedRequest.getUrl(), containsString(proxiedPort));
