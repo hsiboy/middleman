@@ -138,7 +138,9 @@
         <attribute name="test.dir"/>
         <sequential>
             <mkdir dir="${test.reports.dir}"/>
-            <junit fork="yes" forkmode="once" failureproperty="test.failure" logfailedtests="yes" showoutput="true" printsummary="on" enabletestlistenerevents="true">
+            <junit fork="yes" forkmode="once" failureproperty="test.failure" logfailedtests="yes" printsummary="on"> 
+                	<!-- **additional attributes for output to debug **
+                			 showoutput="true" enabletestlistenerevents="true" -->
                 <jvmarg value="-Xmx512M"/>
                 <classpath>
                     <fileset dir="${instrumented.dir}" includes="*.jar"/>
@@ -249,17 +251,17 @@
                         classpathref="test.classpath"/>
     </target>
     
-    <condition property="firefoxProfile.dir.exists" else="false">
+    <condition property="firefoxProfile.dir.exists">
         <available file="${firefoxProfile.dir}" type="dir" />
     </condition>
 
-    <target name="test.firefoxProfile.dir" description="Create Firefix profile directories if doesnt exist (Travis)" unless="firefoxProfile.dir.exists">
-        <mkdir dir="${firefoxProfile.dir}" failonerror="false"/>
+    <target name="test.firefoxProfile.dir" description="Create Firefix profile directory if doesnt exist (Travis)" unless="firefoxProfile.dir.exists">
+        <echo>Creating Firefix profile directory as it doesnt exist (Travis!)</echo>
+        <mkdir dir="${firefoxProfile.dir}"/>
     </target>
 
     <target name="test" description="Runs JUnit tests (without building)" unless="notests" depends="test.firefoxProfile.dir">
         <mkdir dir="${instrumented.dir}"/>
-        <mkdir dir="${firefoxProfile.dir}"/>
         <unit.test test.dir="${test.dir}"/>
     </target>
 
