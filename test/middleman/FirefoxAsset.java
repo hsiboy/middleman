@@ -56,6 +56,7 @@ final class FirefoxAsset extends TestAsset {
     	FirefoxProfile profile = new FirefoxProfile(firefoxProfileFolder);
         profile.setPreference("extensions.checkCompatibility", false);
 
+        profile.setPreference("network.http.prompt-temp-redirect", false);
         profile.setPreference("network.proxy.http", "localhost");
         profile.setPreference("network.proxy.no_proxies_on", "");
         profile.setPreference("network.proxy.http_port", PROXY_PORT);

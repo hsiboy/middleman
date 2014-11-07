@@ -1,15 +1,18 @@
 env:
   - ANT_OPTS=-Xmx1024m
+  - DISPLAY=':99.0'
 language: java
 jdk:
   - openjdk7
   - openjdk6
 before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3
 script: "ant -lib lib/build -lib lib/test build"
 notifications:
   email:
     - travis.middleman@stuart-taylor.net
+    - trav@tommytaylor.co.uk
 on_failure: always
 on_success: change
