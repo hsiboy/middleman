@@ -137,7 +137,7 @@
         <attribute name="test.dir"/>
         <sequential>
             <mkdir dir="${test.reports.dir}"/>
-            <junit fork="yes" forkmode="once" failureproperty="test.failure" logfailedtests="yes">
+            <junit fork="yes" forkmode="once" failureproperty="test.failure" logfailedtests="yes" showoutput="true" printsummary="on" enabletestlistenerevents="true">
                 <jvmarg value="-Xmx512M"/>
                 <classpath>
                     <fileset dir="${instrumented.dir}" includes="*.jar"/>

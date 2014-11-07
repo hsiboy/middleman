@@ -35,7 +35,6 @@
 		                <td class="bytesReceived">$it.bytesReceived$</td>
 		                <td class="elapsedTime">$it.elapsedTime$</td>
 		                <td class="successfull">$it.requestSuccesfullCode$</td>
-		                <td class="requestContent">$it.htmlEncodedRequestData$</td>
 		                <td class="contentType">$it.responseContentType$</td>
 		                <td class="host">$it.host$</td>
 		                <td class="path">$it.path$</td>
