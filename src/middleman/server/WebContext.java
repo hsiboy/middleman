@@ -1,6 +1,7 @@
 package middleman.server;
 
 import com.sun.net.httpserver.HttpExchange;
+
 import middleman.configuration.ProxyConfig;
 import middleman.framework.*;
 import middleman.server.components.NewProxyRequestDocument;
@@ -8,6 +9,7 @@ import middleman.server.components.StubRequest;
 import middleman.server.components.TemplateAttribute;
 import middleman.server.components.TemplateAttributes;
 import middleman.utils.Block;
+
 import org.antlr.stringtemplate.AttributeRenderer;
 import org.antlr.stringtemplate.StringTemplate;
 import org.antlr.stringtemplate.StringTemplateGroup;
@@ -73,18 +75,22 @@ public class WebContext {
         renderTemplateResponse(templateName, templateAttributes, xmlHeaders, renderers);
     }
     
-    public void renderTemplateJSONResponse(String templateName, TemplateAttributes templateAttributes) {
+    public void renderTemplateJSONResponse(String templateName, TemplateAttributes templateAttributes, Boolean jsonp) {
         Hashtable<String, String> jsonHeaders = new Hashtable<String, String>();
-        jsonHeaders.put("Content-type", "application/json");
+        
+        if (jsonp) {
+        	jsonHeaders.put("Content-type", "application/javascript");
+        } else {
+        	jsonHeaders.put("Content-type", "application/json");
+        }
 
         renderTemplateResponse(templateName, templateAttributes, jsonHeaders, new HashMap<Class, AttributeRenderer>());
     }
     
-
     private void renderTemplateResponse(String templateName, TemplateAttributes templateAttributes, Map<String, String> headers, Map<Class, AttributeRenderer> renderers) {
         try {
             StringTemplate template = templateGroup.getInstanceOf("middleman/templates/" + templateName);
-
+            
             templateAttributes.applyTo(template);
 
             for (Map.Entry<Class, AttributeRenderer> renderer : renderers.entrySet()) {
@@ -166,6 +172,7 @@ public class WebContext {
                 entry.handler.present(context);
                 return;
             }
+            
         }
         context.noHandlerForRequest();
     }

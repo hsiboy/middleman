@@ -3,6 +3,7 @@ package middleman.configuration;
 import java.io.File;
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ public class GoogleSuggestFunctionalTests {
         new GoogleSuggestFunctionalTests().spinGoogle();
     }
 
-    @Test
+    @Ignore @Test
     public void spinGoogle() {
         WebDriver driver = new FirefoxDriver();
                 

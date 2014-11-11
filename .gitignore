@@ -3,4 +3,6 @@ build/middleman.zip
 build/jar/
 build/test-reports/
 build/dist/
+src/middleman/configuration/ConfigurationLexer.java
+src/middleman/configuration/ConfigurationParser.java
 .DS_Store

@@ -1,24 +1,17 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	    <meta charset="utf-8">
-  		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  		<title dir="ltr">Requests Log - $proxy.name$ | Middleman</title>
-  		<meta name="viewport" content="width=device-width">
-	    <link rel="stylesheet" type="text/css" href="/middleman.css">
-	</head>
-	<body>
-		<div class="content">
+		$middleman/templates/header(title={Requests Log - $proxy.name$ | Middleman})$
 		    <div class="title">Proxy server "$proxy.name$" Logs</div>
 		    <div class="back">Your are here: <a href="/">Home</a> &gt; <a href="/$proxy.name$">Proxy server "$proxy.name$"</a> &gt; Requests Log</div>
-		    <form action="/$proxy.name$/log/reset" method="POST" name="resetlogs">
+		    <form id="resetlogs" action="/$proxy.name$/log/reset" method="POST" name="resetlogs">
 		        <button type="submit">Clear Log</button>
 		        <a class="button" href="/$proxy.name$/log">Refresh Log</a>
 		        <a class="download" href="/$proxy.name$/log/csv">Download this log as CSV</a> | 
 		        <a class="download" href="/$proxy.name$/log/xml">View XML</a> | 
-		        <a class="download" href="/$proxy.name$/log/json">View JSON</a>
+		        <a class="download" href="/$proxy.name$/log/json">View JSON</a> |
+		        <a class="download" href="/$proxy.name$/log/jsonp">View JSONP</a>
 		    </form>
-		    <div><span class="requestsRunning">$requestCounter.numberOfRunningRequests$</span> requests are still in process, no requests have been processed in the last <span id="millisecondsWithoutRunningRequest">$requestCounter.millisecondsWithoutRunningRequest$</span> milliseconds.</div>
+		    <div>
+		    	<span class="requestsRunning">$requestCounter.numberOfRunningRequests$</span> requests are still in process, no requests have been processed in the last <span id="millisecondsWithoutRunningRequest">$requestCounter.millisecondsWithoutRunningRequest$</span> milliseconds.
+		    </div>
 		    <table>
 		        <thead>
 		            <tr>
@@ -42,7 +35,6 @@
 		                <td class="bytesReceived">$it.bytesReceived$</td>
 		                <td class="elapsedTime">$it.elapsedTime$</td>
 		                <td class="successfull">$it.requestSuccesfullCode$</td>
-		                <td class="requestContent">$it.htmlEncodedRequestData$</td>
 		                <td class="contentType">$it.responseContentType$</td>
 		                <td class="host">$it.host$</td>
 		                <td class="path">$it.path$</td>
@@ -51,9 +43,4 @@
 		            </tr>
 		        }$
 		    </table>
-		    <div class="footer">
-		    	&copy; Middleman 2010 - 2014 - <a href="/doc/index.html">Documentation</a> | <a href="http://github.com/hsiboy/middleman">hosted on Github</a>
-		    </div>
-		</div>
-	</body>
-</html>
+		$middleman/templates/footer()$

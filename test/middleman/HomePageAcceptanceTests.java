@@ -32,9 +32,21 @@ public class HomePageAcceptanceTests {
         testContext.verify(new Block<TestContext>() {
             public void yield(TestContext ctx) {
                 ctx.driver().get(TestAsset.middlemanInstance().uri("/"));
-                WebElement element = ctx.driver().findElement(By.linkText("Middleman documentation"));
+                WebElement element = ctx.driver().findElement(By.linkText("Documentation"));
 
                 assertThat(element.getAttribute("href"), is("http://localhost:2000/doc/index.html"));
+            }
+        });
+    }
+    
+    @Test
+    public void homepageContainsGithubRepoLink() {
+        testContext.verify(new Block<TestContext>() {
+            public void yield(TestContext ctx) {
+                ctx.driver().get(TestAsset.middlemanInstance().uri("/"));
+                WebElement element = ctx.driver().findElement(By.linkText("hosted on Github"));
+
+                assertThat(element.getAttribute("href"), is("http://github.com/hsiboy/middleman"));
             }
         });
     }

@@ -26,4 +26,13 @@ public class ProxyLogPresenter implements Presenter {
                 attribute("logs", logs.getEntries())
         );
     }
+    
+    public static TemplateAttributes withLogAttributes(WebContext context, final RequestLogger logs, Boolean jsonp) {
+        return with(
+                attribute("requestCounter", RequestsCounter.getInstance()),
+                attribute("proxy", context.getServerConfig()),
+                attribute("logs", logs.getEntries()),
+                attribute("jsonp", jsonp.booleanValue())
+        );
+    }
 }

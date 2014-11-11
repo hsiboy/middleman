@@ -2,8 +2,10 @@ package middleman.configuration;
 
 import middleman.framework.UriMatcher;
 import middleman.server.UriMatchers;
+import static middleman.server.UriMatchers.pathMatcher;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+
 import org.junit.Test;
 
 import java.net.URI;
@@ -23,6 +25,16 @@ public class UriMatcherUnitTests {
         UriMatcher matcher = UriMatchers.simpleMatcher("/proxy/new");
 
         assertThat(matcher.matches(new URI("/proxy/new")), is(true));
+        assertThat(matcher.matches(new URI("/proxy/new/")), is(true));
+        assertThat(matcher.matches(new URI("/proxy/new//")), is(false));
+    }
+    
+    @Test
+    public void pathMatcherMatchesSimplePaths() throws URISyntaxException {
+        UriMatcher matcher = UriMatchers.pathMatcher("proxy", "log", "xml");
+
+        assertThat(matcher.matches(new URI("/proxy/log/xml")), is(true));
+        assertThat(matcher.matches(new URI("/proxy/log/xml/")), is(true));
     }
 
     @Test
@@ -30,7 +42,7 @@ public class UriMatcherUnitTests {
         UriMatcher matcher = UriMatchers.patternMatcher("^((?!localhost).)*$");
                                                          
         assertThat(matcher.matches(new URI("localhost")), is(false));
-        assertThat(matcher.matches(new URI("devapp007.dev.tradermedia.net")), is(true));
+        assertThat(matcher.matches(new URI("stupot.taylor.org")), is(true));
     }
 
     @Test

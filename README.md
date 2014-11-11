@@ -67,8 +67,9 @@ View log of requests via:
 * XML - [http://localhost:2000/third-party/log/xml](http://localhost:2000/third-party/log/xml)
 * CSV - [http://localhost:2000/third-party/log/csv](http://localhost:2000/third-party/log/csv)
 * JSON - [http://localhost:2000/third-party/log/json](http://localhost:2000/third-party/log/json)
+* JSONP - [http://localhost:2000/third-party/log/jsonp](http://localhost:2000/third-party/log/jsonp)
 
-TODO: ~~JSON Object!~~ :)
+TODO: ~~JSON Object, with JSONP!~~ :)
 
 
 [Top](#Top)
@@ -102,6 +103,7 @@ Antlr3 library not found via CLASSPATH
 <a name="VersionHistory"></a>
 
 ## Version History
+* 2014-11-07   v0.1.6  Share templates, added jsonp response, more test coverage, works for trailing slash
 * 2014-11-05   v0.1.5  Updated docs and templates, added JSON output of request log :)
 * 2014-11-04   v0.1.4 Tests running via Eclipse and fixed
 * 2014-11-03   v0.1.3  Should now look for git instead of svn, readme updates

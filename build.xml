@@ -40,6 +40,7 @@
 
     <property name="src.dir" location="src"/>
     <property name="test.dir" location="test"/>
+    <property name="firefoxProfile.dir" location="${test.dir}/middleman/firefoxprofile"/>
 
     <property name="build.dir" location="build"/>
     <property name="dist.dir" value="${build.dir}/dist/middleman"/>
@@ -117,6 +118,7 @@
             <copy todir="@{classes.dir}" includeemptydirs="no">
                 <fileset dir="@{src.dir}" excludes="**/*.java"/>
             </copy>
+
             <jar destfile="@{dest.dir}/@{jar.name}" basedir="@{classes.dir}">
                 <manifest>
                     <attribute name="Main-Class" value="middleman.Console"/>
@@ -125,7 +127,7 @@
                     <attribute name="GIT-Revision" value="${git.tag}"/>
                     <attribute name="GIT-Repo" value="${git.url}"/>
                 </manifest>
-                <fileset dir="view" includes="**/*"/>
+                <fileset dir="view" includes="**/**/*"/>
             </jar>
 
             <delete dir="@{classes.dir}"/>
@@ -136,8 +138,10 @@
         <attribute name="test.dir"/>
         <sequential>
             <mkdir dir="${test.reports.dir}"/>
-            <junit fork="no" forkmode="once" failureproperty="test.failure" logfailedtests="yes">
-                <jvmarg value="-Xmx128M"/>
+            <junit fork="yes" forkmode="once" failureproperty="test.failure" logfailedtests="yes" printsummary="on"> 
+                	<!-- **additional attributes for output to debug **
+                			 showoutput="true" enabletestlistenerevents="true" -->
+                <jvmarg value="-Xmx512M"/>
                 <classpath>
                     <fileset dir="${instrumented.dir}" includes="*.jar"/>
                     <path refid="test.classpath"/>
@@ -202,8 +206,8 @@
         </antlr:ant-antlr3>
     </target>
 
-    <target name="build" depends="clean, compile.grammar, compile, grammar.test, dist"
-            description="Runs the full build"/> <!--  test, -->
+    <target name="build" depends="clean, compile.grammar, compile, grammar.test, test, dist"
+            description="Runs the full build"/>
 
     <condition property="build.dir.exists" else="false">
         <available file="${build.dir}" type="dir" />
@@ -246,8 +250,17 @@
                         jar.name="${ant.project.name}.test.jar" manifest="${manifest.file}"
                         classpathref="test.classpath"/>
     </target>
+    
+    <condition property="firefoxProfile.dir.exists">
+        <available file="${firefoxProfile.dir}" type="dir" />
+    </condition>
 
-    <target name="test" description="Runs JUnit tests (without building)" unless="notests">
+    <target name="test.firefoxProfile.dir" description="Create Firefix profile directory if doesnt exist (Travis)" unless="firefoxProfile.dir.exists">
+        <echo>Creating Firefix profile directory as it doesnt exist (Travis!)</echo>
+        <mkdir dir="${firefoxProfile.dir}"/>
+    </target>
+
+    <target name="test" description="Runs JUnit tests (without building)" unless="notests" depends="test.firefoxProfile.dir">
         <mkdir dir="${instrumented.dir}"/>
         <unit.test test.dir="${test.dir}"/>
     </target>
@@ -261,6 +274,7 @@
         <copy todir="${dist.dir}">
             <fileset dir="docs" includes="*"/>
         </copy>
+        <chmod file="${dist.dir}/middleman.sh" perm="ugo+rx"/>
         <zip destfile="${build.dir}/middleman.zip" comment="Middleman distribution">
             <fileset dir="${build.dir}/dist" includes="**/*"/>
         </zip>
